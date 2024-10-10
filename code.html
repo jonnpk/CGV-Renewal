@@ -1,49 +1,46 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>CGV</title>
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="cgv.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        rel="stylesheet">
 </head>
 
 <body>
     <header>
-        <div class="nav">
+        <nav class="header-nav">
             <h1 class="cgv-logo-area">
                 <a href="#" class="cgv-logo">
                     <img src="/source/logo/CGV-logo.png" alt="cgv-logo">
                 </a>
             </h1>
-            <ul class="menu">
+            <ul class="header-menu">
                 <li class="menu-list">
-                    <a href="#">
-
-                    </a>
+                    <a href="#">Movie</a>
                 </li>
                 <li class="menu-list">
-                    <a href="#">
-
-                    </a>
+                    <a href="#">Theater</a>
                 </li>
                 <li class="menu-list">
-                    <a href="#">
-
-                    </a>
+                    <a href="#">Store</a>
                 </li>
                 <li class="menu-list">
-                    <a href="#">
-
-                    </a>
+                    <a href="#">Event</a>
                 </li>
                 <li class="menu-list">
-                    <a href="#">
-
-                    </a>
+                    <a href="#">Benefit</a>
                 </li>
             </ul>
-        </div>
-        <a href="#" class="ticket"></a>
+        </nav>
+        <a href="#" class="ticket-btn">TICKET</a>
     </header>
 
 
@@ -58,9 +55,9 @@
 
     <section class="intro-section">
         <div class="interactive-text-area">
-            <p></p>
-            <p></p>
-            <p></p>
+            <p>영화, 그 이상의 특별한 경험</p>
+            <p>관람을 넘어선 공감각적 경험</p>
+            <p>오직 CGV에서.</p>
         </div>
     </section>
 
@@ -68,78 +65,63 @@
     <section class="tech-section">
         <div class="title-container">
             <div class="title-area">
-                <h2></h2>
-                <p></p>
+                <h2>CGV만의 Technology로 경험하는 최적의 관람.</h2>
+                <p>진화된 3S(Screen, Sound, Seat) 기술로 컨텐츠 몰입도를 극대화하여 영화 관람에 최적화된 환경을 제공합니다.</p>
             </div>
         </div>
         <div class="section-container-wrap">
             <div class="section-container">
                 <div class="theater-box">
                     <div class="theater-name">
-                        <figure>
-                            <img src="" alt="">
-                        </figure>
-                        <p></p>
+                        <figure class="ultra-4dx-logo"></figure>
+                        <h2>최대치의 공감각</h2>
                     </div>
-                    <div class="learn-more-btn">
-                        <p></p>
-                    </div>
+                    <button class="learn-more-btn">
+                        <a href="">Learn More</a>
+                    </button>
                 </div>
                 <div class="content-area">
                     <div class="article-box">
-                        <h2></h2>
-                        <p></p>
+                        <h2>FEEL IT IN 4DX</h2>
+                        <p>새로운 차원의 영화를 경험하세요.
+                            <br>
+                            모션 시트, 바람, 빛 등 다양한 효과가 몰입감을 더합니다.
+                        </p>
                     </div>
-                    <div class="4dx-content-box">
-                        <div class="4dx-icon">
-                            <figure>
-                                <img src="" alt="">
-                            </figure>
-                            <p></p>
-                        </div>
-                        <div class="4dx-icon">
-                            <figure>
-                                <img src="" alt="">
-                            </figure>
-                            <p></p>
-                        </div>
-                        <div class="4dx-icon">
-                            <figure>
-                                <img src="" alt="">
-                            </figure>
-                            <p></p>
-                        </div>
-                        <div class="4dx-icon">
-                            <figure>
-                                <img src="" alt="">
-                            </figure>
-                            <p></p>
-                        </div>
-                        <div class="4dx-icon">
-                            <figure>
-                                <img src="" alt="">
-                            </figure>
-                            <p></p>
-                        </div>
-                        <div class="4dx-icon">
-                            <figure>
-                                <img src="" alt="">
-                            </figure>
-                            <p></p>
-                        </div>
-                        <div class="4dx-icon">
-                            <figure>
-                                <img src="" alt="">
-                            </figure>
-                            <p></p>
-                        </div>
-                        <div class="4dx-icon">
-                            <figure>
-                                <img src="" alt="">
-                            </figure>
-                            <p></p>
-                        </div>
-                    </div>
+                    <ul class="4dx-content-box">
+                        <li class="4dx-icon">
+                            <figure class="wind-icon"></figure>
+                            <p>Wind</p>
+                        </li>
+                        <li class="4dx-icon">
+                            <figure class="bubbles-icon"></figure>
+                            <p>Bubbles</p>
+                        </li>
+                        <li class="4dx-icon">
+                            <figure class="lightning-icon"></figure>
+                            <p>Lightning</p>
+                        </li>
+                        <li class="4dx-icon">
+                            <figure class="fog-icon"></figure>
+                            <p>Fog</p>
+                        </li>
+                        <li class="4dx-icon">
+                            <figure class="vibration-icon"></figure>
+                            <p>Vibration</p>
+                        </li>
+                        <li class="4dx-icon">
+                            <figure class="scents-icon"></figure>
+                            <p>Scents</p>
+                        </li>
+                        <li class="4dx-icon">
+                            <figure class="water-icon"></figure>
+                            <p>Water</p>
+                        </li>
+                        <li class="4dx-icon">
+                            <figure class="motion-icon"></figure>
+                            <p>Motion</p>
+                        </li>
+                    </ul>
                 </div>
             </div>
         </div>
@@ -147,52 +129,53 @@
             <div class="section-container">
                 <div class="theater-box">
                     <div class="theater-name">
-                        <figure>
-                            <img src="" alt="">
-                        </figure>
-                        <p></p>
+                        <figure class="imax-logo"></figure>
+                        <h2>궁극의 몰입감</h2>
                     </div>
-                    <div class="learn-more-btn">
-                        <p></p>
-                    </div>
+                    <button class="learn-more-btn">
+                        <a href="">Learn More</a>
+                    </button>
                 </div>
                 <div class="content-area">
                     <div class="article-box">
-                        <h2></h2>
-                        <p></p>
+                        <h2>IMMERSE IN STUNNING IMAX</h2>
+                        <p>IMAX에서 선명한 화질, 초대형 스크린, 강력한 사운드로 몰입을 경험하세요.</p>
                     </div>
-                    <div class="imax-content-box">
-                        <div class="imax-info">
-                            <figure>
-                                <img src="" alt="">
-                            </figure>
+                    <ul class="imax-content-box">
+                        <li class="imax-info">
+                            <figure class="image-icon"></figure>
                             <div class="imax-info-title">
-                                <p></p>
-                                <h2></h2>
+                                <p>Crystal Clear</p>
+                                <h2>IMAGE</h2>
                             </div>
-                            <p></p>
-                        </div>
-                        <div class="imax-info">
-                            <figure>
-                                <img src="" alt="">
-                            </figure>
+                            <p>Customized Projector로
+                                <br>비교할 수 없는 밝음과 뛰어난
+                                <br>선명한 화질 제공
+                            </p>
+                            </il>
+                            <il class="imax-info">
+                                <figure class="screen-icon"></figure>
+                                <div class="imax-info-title">
+                                    <p>Maximized</p>
+                                    <h2>SCREEN</h2>
+                                </div>
+                                <p>대형 스크린에 맞는
+                                    <br>맞춤형 설계로 모든 좌석에서
+                                    <br>최고의 몰입 가능
+                                </p>
+                            </il>
+                        <li class="imax-info">
+                            <figure class="sound-icon"></figure>
                             <div class="imax-info-title">
-                                <p></p>
-                                <h2></h2>
+                                <p>Powerful</p>
+                                <h2>SOUND</h2>
                             </div>
-                            <p></p>
-                        </div>
-                        <div class="imax-info">
-                            <figure>
-                                <img src="" alt="">
-                            </figure>
-                            <div class="imax-info-title">
-                                <p></p>
-                                <h2></h2>
-                            </div>
-                            <p></p>
-                        </div>
-                    </div>
+                            <p>완벽하게 조율된 소리와
+                                <br>핀 포인트 정확도로
+                                <br>최적의 사운드를 제공
+                            </p>
+                            </il>
+                    </ul>
                 </div>
             </div>
         </div>
@@ -200,49 +183,43 @@
             <div class="section-container">
                 <div class="theater-box">
                     <div class="theater-name">
-                        <figure>
-                            <img src="" alt="">
-                        </figure>
-                        <p></p>
+                        <figure class="starium-logo"></figure>
+                        <h2>압도적인 스케일</h2>
                     </div>
-                    <div class="learn-more-btn">
-                        <p></p>
-                    </div>
+                    <button class="learn-more-btn">
+                        <a href="">Learn More</a>
+                    </button>
                 </div>
                 <div class="content-area">
                     <div class="article-box">
-                        <h2></h2>
-                        <p></p>
+                        <h2>BEYOND REALITY</h2>
+                        <p>Starium에서 현실을 뛰어넘는 경험을.
+                            <br>압도적인 스크린, 생생한 화질, 16채널 사운드로 감각을 깨우세요.
+                        </p>
                     </div>
-                    <div class="starium-content-box">
-                        <div class="starium-info">
-                            <figure>
-                                <img src="" alt="">
-                            </figure>
+                    <ul class="starium-content-box">
+                        <li class="starium-info">
+                            <figure class="super-giant-icon"></figure>
                             <div class="starium-info-text-box">
-                                <h2></h2>
-                                <p></p>
+                                <h2>Super Giant</h2>
+                                <p>SCREEN</p>
                             </div>
-                        </div>
-                        <div class="starium-info">
-                            <figure>
-                                <img src="" alt="">
-                            </figure>
+                        </li>
+                        <li class="starium-info">
+                            <figure class="4k-icon"></figure>
                             <div class="starium-info-text-box">
-                                <h2></h2>
-                                <p></p>
+                                <h2>4K Ultra-High</h2>
+                                <p>RESOLUTION</p>
                             </div>
-                        </div>
-                        <div class="starium-info">
-                            <figure>
-                                <img src="" alt="">
-                            </figure>
+                        </li>
+                        <li class="starium-info">
+                            <figure class="most-dynamic-icon"></figure>
                             <div class="starium-info-text-box">
-                                <h2></h2>
-                                <p></p>
+                                <h2>Most Dynamic</h2>
+                                <p>SOUND</p>
                             </div>
-                        </div>
-                    </div>
+                        </li>
+                    </ul>
                 </div>
             </div>
         </div>
@@ -252,61 +229,53 @@
     <section class="prestige-section">
         <div class="title-container">
             <div class="title-area">
-                <h2></h2>
-                <p></p>
+                <h2>CGV가 선사하는 특별한 공간적 경험.</h2>
+                <p>세련된 인테리어와 고급스러운 서비스로 진정한 우아함을 느낄 수 있는 CGV의 Prestige관은, 특별한 테마를 바탕으로 다양한 영화 관람 경험을 선사합니다.</p>
             </div>
         </div>
         <div class="article-container">
             <article class="prestige-theater">
                 <div class="theater-box">
                     <div class="theater-name">
-                        <figure>
-                            <img src="" alt="">
-                        </figure>
-                        <p></p>
+                        <figure class="cine-de-chef-logo"></figure>
+                        <h2>특별한 순간을 품격 있게</h2>
                     </div>
-                    <div class="learn-more-btn">
-                        <p></p>
-                    </div>
+                    <button class="learn-more-btn">
+                        <a href="">Learn More</a>
+                    </button>
                 </div>
             </article>
             <article>
                 <div class="theater-box">
                     <div class="theater-name">
-                        <figure>
-                            <img src="" alt="">
-                        </figure>
-                        <p></p>
+                        <figure class="cine-livingroom-logo"></figure>
+                        <h2>편안하고 특별한 매력</h2>
                     </div>
-                    <div class="learn-more-btn">
-                        <p></p>
-                    </div>
+                    <button class="learn-more-btn">
+                        <a href="">Learn More</a>
+                    </button>
                 </div>
             </article>
             <article>
                 <div class="theater-box">
                     <div class="theater-name">
-                        <figure>
-                            <img src="" alt="">
-                        </figure>
-                        <p></p>
+                        <figure class="suite-logo"></figure>
+                        <h2>프라이빗 & 프리미엄</h2>
                     </div>
-                    <div class="learn-more-btn">
-                        <p></p>
-                    </div>
+                    <button class="learn-more-btn">
+                        <a href="">Learn More</a>
+                    </button>
                 </div>
             </article>
             <article>
                 <div class="theater-box">
                     <div class="theater-name">
-                        <figure>
-                            <img src="" alt="">
-                        </figure>
-                        <p></p>
+                        <figure class="cine-foret-logo"></figure>
+                        <h2>도심 속 푸르름의 가치</h2>
                     </div>
-                    <div class="learn-more-btn">
-                        <p></p>
-                    </div>
+                    <button class="learn-more-btn">
+                        <a href="">Learn More</a>
+                    </button>
                 </div>
             </article>
         </div>
@@ -314,28 +283,28 @@
 
     <section class="customer-section">
         <div class="section-container">
-            <h2></h2>
+            <h2>이 모든 것을 오직 CGV에서.</h2>
             <div class="customer-info-area">
                 <div class="customer-info-cs">
-                    <h2></h2>
+                    <h2>고객센터</h2>
                     <div class="cs-box">
-                        <p></p>
-                        <p></p>
-                        <p></p>
-                        <p></p>
-                        <span class="cs-btn"></span>
-                        <span class="cs-btn"></span>
-                        <span class="cs-btn"></span>
+                        <p class="cs-box-16">1544-1122</p>
+                        <p class="cs-box-14">운영시간</p>
+                        <p class="cs-box-14">평일 09:00-18:00</p>
+                        <p class="cs-box-10">업무시간 외 자동응답 안내 가능합니다.</p>
+                        <span class="cs-btn">FAQ</span>
+                        <span class="cs-btn">1:1 문의</span>
+                        <span class="cs-btn">대관/단체 문의</span>
                     </div>
                 </div>
                 <div class="customer-info-app">
-                    <h2></h2>
+                    <h2>앱 다운로드</h2>
                     <div class="app-box">
-                        <p></p>
+                        <p class="app-box-14">CGV앱에서 더 편리하게 이용하세요</p>
                         <figure>
-                            <img src="" alt="">
+                            <img src="" alt="app-qr">
                         </figure>
-                        <p></p>
+                        <p class="app-box-10">QR코드를 스캔하고<br>앱설치 페이치로 바로 이동하세요</p>
                     </div>
                 </div>
             </div>
@@ -344,35 +313,43 @@
 
     <footer>
         <ul class="footer-nav">
-            <li><a href="#"></a></li>
-            <li><a href="#"></a></li>
-            <li><a href="#"></a></li>
-            <li><a href="#"></a></li>
-            <li><a href="#"></a></li>
-            <li><a href="#"></a></li>
-            <li><a href="#"></a></li>
-            <li><a href="#"></a></li>
-            <li><a href="#"></a></li>
-            <li><a href="#"></a></li>
-            <li><a href="#"></a></li>
-            <li><a href="#"></a></li>
+            <li><a href="#">회사소개</a></li>
+            <li><a href="#">지속가능경영</a></li>
+            <li><a href="#">IR</a></li>
+            <li><a href="#">채용정보</a></li>
+            <li><a href="#">광고/제휴/출점문의</a></li>
+            <li><a href="#">이용약관</a></li>
+            <li><a href="#">편성기준</a></li>
+            <li><a href="#"><span class="footer-emport">개인정보처리방침</span></a></li>
+            <li><a href="#">법적고지</a></li>
+            <li><a href="#">이메일주소무단수집거부</a></li>
+            <li><a href="#">윤리경영</a></li>
+            <li><a href="#">사이버감사실</a></li>
         </ul>
-        <!-- 라인 삽입 필 -->
+        <div class="footer-line"></div>
         <div class="company-info">
             <div class="company-info-text">
-                <p></p>
-                <p></p>
-                <p></p>
-                <p></p>
+                <p>(04377)서울특별시 용산구 한강대로 23길 55, 아이파크몰 6층(한강로동)</p>
+                <p>대표이사 : 허민회 · 사업자등록번호 : 104-81-45690 · 통신판매업신고번호 : 2017-서울용산-0662 <span
+                        class="footer-emport">사업자정보확인</span></p>
+                <p>호스팅사업자 : CJ올리브네트웍스 · 대표이메일 : cjcgvmaster@cj.net</p>
+                <p>&copy; CJ CGV. All Rights Reserved</p>
             </div>
             <div class="company-link">
-                <span class="link-list">
-                    <p></p>
+                <!-- <span class="link-list">
+                    <p>계열사 바로가기</p>
                     <figure>
-                        <img src="" alt="">
+                        <img src="" alt="link-list-btn">
                     </figure>
-                </span>
-                <span class="go-btn"></span>
+                </span> -->
+                <select name="subsidiary">
+                    <option value="cj-group">CJ그룹</option>
+                    <option value="food">식품 & 식품서비스</option>
+                    <option value="biotechnology">생명공학</option>
+                    <option value="distribution">물류 & 신유통</option>
+                    <option value="entertainment">엔터테인먼트 & 미디어</option>
+                </select>
+                <span class="go-btn">GO</span>
             </div>
         </div>
     </footer>
