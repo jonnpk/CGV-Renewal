@@ -6,37 +6,172 @@ header{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 16px 32px;
+    background-color: rgba(35, 35, 35, 0.5);
 }
 
 .header-nav{
     display: flex;
     align-items: center;
+    gap: 56px;
 }
 
 .cgv-logo,
-.cgv-logo > img {
-    width: 156px;
-    height: 69px;
+.cgv-logo > svg {
+    width: 136px;
+    height: 60px;
 }
-
-.cgv-logo 
 
 .header-menu{
     display: flex;
     gap: 40px;
 }
 
+.menu-list{
+    display: flex;
+}
+
 .menu-list a{
-    font-size: 24px;
+    font-size: 20px;
+    font-weight: 600;
     color: white;
     text-decoration: none;
+    text-shadow: 1px 4px 10px rgba(0, 0, 0, 0.4);
 }
 
 .ticket-btn{
     display: block;
     padding: 10px 32px;
-    background-color: #E42313;
+    background-color: rgba(228, 35, 19, 0.5);
     color: white;
     text-decoration: none;
     border-radius: 30px;
+    font-size: 20px;
+    font-weight: 600;
+    box-shadow: 1px 4px 10px rgba(0, 0, 0, 0.4);
+}
+
+.mouse-box{
+    width: 20px;
+    height: 35px;
+    position: absolute;
+    bottom: 60px;
+    left: 50%;
+    transform: translate(-50%,0);
+}
+
+.mouse-body{
+    width: 100%;
+    height: 100%;
+    border: 4px solid white;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    animation: mm 1.5s infinite;
+}
+
+.mouse-btn{
+    width: 6px;
+    height: 6px;
+    background-color: white;
+    border-radius: 50%;
+    margin: 2px;
+    animation: mb 1.5s infinite;
+}
+
+@keyframes mm {
+    from{
+        transform: translateY(0);
+    }
+
+    50%{
+        transform: translateY(50%);
+        opacity: 1;
+    }
+
+    to{
+        transform: translateY(50%);
+        opacity: 0;
+    }
+}
+
+@keyframes mb{
+    from{
+        transform: translateY(0);
+    }
+
+    50%{
+        transform: translateY(400%);
+        opacity: 1;
+    }
+
+    to{
+        transform: translateY(400%);
+        opacity: 0;
+    }
+}
+
+#video-section{
+    background-image: url(source/background/video.jpg);
+    height: 100vh;
+    background-size: cover;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+}
+
+#intro-section{
+    background-image: url(source/background/intro.jpg);
+    height: 100vh;
+    background-size: cover;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.interactive-text-area{
+    position: relative;
+    top: -5%;
+    left: -1%;
+    border: 1px solid #222;
+}
+
+.interactive-text-area p{
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.title-container{
+    height: 450px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.title-area{
+    text-align: center;
+    line-height: 30px;
+}
+
+.title-area h2{
+    font-size: 24px;
+    font-weight: 600;
+    color: white;
+}
+
+.title-area p{
+    font-size: 14px;
+    color: white;
+}
+
+.section-container-wrap{
+    height: 500px;
+}
+
+.section-container-wrap.ultra-4dx{
+    background-image: url(source/background/ULTRA_4DX.jpg);
+    background-size: cover;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
 }
