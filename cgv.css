@@ -172,27 +172,22 @@ header{
     height: 500px;
     display: flex;
     justify-content: center;
+    background-size: cover;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
 }
 
 .section-container-wrap.ultra-4dx{
     background-image: url(source/background/ULTRA_4DX.jpg);
-    background-size: cover;
-    background-position: 50% 50%;
-    background-repeat: no-repeat;
+    
 }
 
 .section-container-wrap.imax{
     background-image: url(source/background/IMAX.jpg);
-    background-size: cover;
-    background-position: 50% 50%;
-    background-repeat: no-repeat;
 }
 
 .section-container-wrap.starium{
     background-image: url(source/background/starium.jpg);
-    background-size: cover;
-    background-position: 50% 50%;
-    background-repeat: no-repeat;
 }
 
 .section-container{
@@ -295,44 +290,22 @@ header{
     text-shadow: 1px 4px 10px rgba(0, 0, 0, 0.4);
 }
 
-.icon{
+.icon-circle{
     width: 32px;
     height: 32px;
-    background-size: cover;
-    background-position: 50% 50%;
-    background-repeat: no-repeat;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.icon.wind{
-    background-image: url(source/icon/ultra-4dx-icon-wind.png);
+.icon-circle.wind{
+    background-color: rgba(255, 205, 205, 0.85)
 }
 
-.icon.bubbles{
-    background-image: url(source/icon/ultra-4dx-icon-bubbles.png);
-}
-
-.icon.lightning{
-    background-image: url(source/icon/ultra-4dx-icon-lightning.png);
-}
-
-.icon.fog{
-    background-image: url(source/icon/ultra-4dx-icon-fog.png);
-}
-
-.icon.vibration{
-    background-image: url(source/icon/ultra-4dx-icon-vibration.png);
-}
-
-.icon.scents{
-    background-image: url(source/icon/ultra-4dx-icon-scents.png);
-}
-
-.icon.water{
-    background-image: url(source/icon/ultra-4dx-icon-water.png);
-}
-
-.icon.motion{
-    background-image: url(source/icon/ultra-4dx-icon-motion.png);
+.icon-circle.wind img{
+    width: 19px;
+    height: 14px;
 }
 
 
