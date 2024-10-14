@@ -3,11 +3,14 @@ body{
 }
 
 header{
+    padding: 16px 32px;
+    background-color: rgba(35, 35, 35, 0.5);
+    position: fixed;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 16px 32px;
-    background-color: rgba(35, 35, 35, 0.5);
+    width: 100%;
+    box-sizing: border-box;
 }
 
 .header-nav{
@@ -143,7 +146,7 @@ header{
 }
 
 .title-container{
-    height: 450px;
+    height: 350px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -167,6 +170,8 @@ header{
 
 .section-container-wrap{
     height: 500px;
+    display: flex;
+    justify-content: center;
 }
 
 .section-container-wrap.ultra-4dx{
@@ -175,3 +180,159 @@ header{
     background-position: 50% 50%;
     background-repeat: no-repeat;
 }
+
+.section-container-wrap.imax{
+    background-image: url(source/background/IMAX.jpg);
+    background-size: cover;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+}
+
+.section-container-wrap.starium{
+    background-image: url(source/background/starium.jpg);
+    background-size: cover;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+}
+
+.section-container{
+    width: 1200px;
+    display: flex;
+    justify-content: space-around;
+    padding: 32px 0
+}
+
+.theater-box{
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    margin-top: 108px;
+}
+
+.ultra-4dx-logo{
+    width: 186px;
+}
+
+.theater-name{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.theater-name p{
+    color: white;
+    font-size: 16px;
+    font-weight: 500;
+    text-shadow: 1px 4px 10px rgba(0, 0, 0, 0.4);
+}
+
+.learn-more-btn{
+    display: inline-block;
+    align-self: flex-start;
+    text-decoration: none;
+    color: white;
+    font-size: 14px;
+    border: 2px solid white;
+    border-radius: 87px;
+    padding: 8px 16px;
+    width: auto;
+    box-shadow: 1px 4px 10px rgba(0, 0, 0, 0.4);
+}
+
+.content-area{
+    display: flex;
+    flex-direction: column;
+    align-self: flex-end;
+    margin-bottom: 57px;
+    gap: 16px;
+}
+
+.article-box{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    text-align: center;
+    color: white;
+    text-shadow: 1px 4px 10px rgba(0, 0, 0, 0.4);
+}
+
+.article-box h2{
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.article-box p{
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 18px;
+}
+
+.fourdx-content-box{
+    width: 328px;
+    background-color: rgba(228, 35, 19, 0.5);
+    border-radius: 14px;
+    box-shadow: 1px 4px 10px rgba(0, 0, 0, 0.4);
+}
+
+.fourdx-icon-list{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 16px 24px;
+    row-gap: 16px;
+}
+
+.fourdx-icon{
+    width: 70px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+}
+
+.fourdx-icon p{
+    font-size: 12px;
+    color: white;
+    text-shadow: 1px 4px 10px rgba(0, 0, 0, 0.4);
+}
+
+.icon{
+    width: 32px;
+    height: 32px;
+    background-size: cover;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+}
+
+.icon.wind{
+    background-image: url(source/icon/ultra-4dx-icon-wind.png);
+}
+
+.icon.bubbles{
+    background-image: url(source/icon/ultra-4dx-icon-bubbles.png);
+}
+
+.icon.lightning{
+    background-image: url(source/icon/ultra-4dx-icon-lightning.png);
+}
+
+.icon.fog{
+    background-image: url(source/icon/ultra-4dx-icon-fog.png);
+}
+
+.icon.vibration{
+    background-image: url(source/icon/ultra-4dx-icon-vibration.png);
+}
+
+.icon.scents{
+    background-image: url(source/icon/ultra-4dx-icon-scents.png);
+}
+
+.icon.water{
+    background-image: url(source/icon/ultra-4dx-icon-water.png);
+}
+
+.icon.motion{
+    background-image: url(source/icon/ultra-4dx-icon-motion.png);
+}
+
+

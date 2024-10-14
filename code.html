@@ -24,7 +24,7 @@
                             <defs>
                                 <filter id="dropShadow" x="-50%" y="-50%" width="200%" height="200%">
                                     <feGaussianBlur in="SourceAlpha" stdDeviation="3" /> <!-- Blur effect -->
-                                    <feOffset dx="2" dy="2" result="offsetblur" /> <!-- Offset position -->
+                                    <feOffset dx="3" dy="3" result="offsetblur" /> <!-- Offset position -->
                                     <feFlood flood-color="rgba(0,0,0,0.5)" /> <!-- Shadow color -->
                                     <feComposite in2="offsetblur" operator="in" /> <!-- Composite shadow -->
                                     <feMerge>
@@ -34,43 +34,44 @@
                                 </filter>
                             </defs>
                             <style type="text/css">
-                                .st0 {
+                                .cgv-1 {
                                     fill: #E42312;
                                 }
 
-                                .st1 {
+                                .cgv-2 {
                                     fill: #EC6606;
                                 }
                             </style>
-                            <g>
-                                <path class="st0" d="M424.95,21.52l-6.16-17.48c-1.11-3.15-4.57-4.82-7.73-3.7c-3.16,1.11-4.81,4.57-3.7,7.73l6.49,18.42l7.79,4.42
-		L424.95,21.52z" />
-                                <path class="st1" d="M436.04,26.5l6.49-18.42c1.11-3.16-0.55-6.62-3.7-7.73c-3.15-1.12-6.62,0.54-7.72,3.7l-6.16,17.48l3.3,9.39
-		L436.04,26.5z" />
-                                <path class="st0" d="M456.9,21.63c-1.66-2.91-5.35-3.93-8.26-2.27l-12.59,7.14l-3.4,9.67l6.58,2.47l15.4-8.74
-		C457.52,28.25,458.55,24.55,456.9,21.63z" />
-                                <path class="st1" d="M431.01,48.5l13.2,4.95c0.7,0.27,1.42,0.38,2.12,0.38c2.46,0,4.77-1.5,5.68-3.93c1.17-3.14-0.42-6.63-3.55-7.8
-		l-9.25-3.46l-8.21,4.65V48.5z" />
-                                <path class="st0"
-                                    d="M418.88,48.5v9.58c0,3.34,2.72,6.05,6.07,6.05c3.35,0,6.06-2.71,6.06-6.05V48.5l-6.06-2.27L418.88,48.5z" />
-                                <path class="st0" d="M410.67,38.64l-9.24,3.46c-3.14,1.18-4.73,4.67-3.55,7.8c0.91,2.43,3.22,3.93,5.68,3.93
-		c0.71,0,1.42-0.12,2.12-0.38l13.2-4.95v-5.21L410.67,38.64z" />
-                                <path class="st1" d="M413.85,26.5l-12.59-7.14c-2.91-1.65-6.61-0.64-8.26,2.27c-1.65,2.92-0.62,6.62,2.29,8.26l15.39,8.74
-		l6.58-2.47L413.85,26.5z" />
-                                <path class="st0" d="M195.82,200.27c21.36,0,40.83-9.03,54.61-23.28c9.24-9.5,16.07-21.45,19.62-34.72l23.85,44.82
-		c3.71,6.97,10.93,11.33,18.81,11.33c7.89,0,15.11-4.37,18.82-11.33l58.28-109.5c5.54-10.42,1.59-23.34-8.83-28.87
-		c-10.43-5.54-23.38-1.58-28.91,8.83l-37.6,73.24l-1.76,6.02l-1.75-6.02l-37.6-73.24c-5.53-10.41-18.48-14.37-28.9-8.83
-		c-10.43,5.54-14.38,18.46-8.83,28.87l14.04,26.4h-43.33c-9.82,0-17.79,8.21-17.79,18.34c0,10.12,7.97,18.33,17.79,18.33h21.43
-		c-5.77,8.88-15.58,17.51-31.99,17.51c-9.52-0.02-18.01-3.89-24.46-10.49c-6.4-6.63-10.43-15.76-10.44-26.11
-		c-0.03-17.96,12.29-32.48,27.64-35.82c11.35-2.52,18.5-13.75,16-25.1c-1.49-6.69-6-11.93-11.79-14.58c-8.39-3.66-18.71,0-18.71,0
-		c-32.3,9.72-55.22,40.06-55.24,75.5c0,4.58,0.4,9.07,1.14,13.44c-6.73,11.1-19.42,25.04-40.65,25.04
-		c-20.4-0.04-37.21-16.76-37.21-37.72c0.01-18.63,13.25-33.9,30.5-37.11c0,0,4.35-0.84,11.34-1.43c6.72-0.57,16.4-8.41,16.4-20.22
-		c0-11.61-9.41-21.02-21.02-21.02C35.34,42.59,0.08,78.4,0,122.34c0.08,43.92,35.34,79.74,79.26,79.77
-		c23.91-0.02,45.23-10.65,59.73-27.4C138.98,174.7,159.35,200.27,195.82,200.27z" />
-                            </g>
+                            <g filter="url(#dropshadow)">
+                                <g>
+                                    <path class="cgv-1" d="M424.95,21.52l-6.16-17.48c-1.11-3.15-4.57-4.82-7.73-3.7c-3.16,1.11-4.81,4.57-3.7,7.73l6.49,18.42l7.79,4.42
+                                    L424.95,21.52z" />
+                                    <path class="cgv-2" d="M436.04,26.5l6.49-18.42c1.11-3.16-0.55-6.62-3.7-7.73c-3.15-1.12-6.62,0.54-7.72,3.7l-6.16,17.48l3.3,9.39
+                                    L436.04,26.5z" />
+                                    <path class="cgv-1" d="M456.9,21.63c-1.66-2.91-5.35-3.93-8.26-2.27l-12.59,7.14l-3.4,9.67l6.58,2.47l15.4-8.74
+                                    C457.52,28.25,458.55,24.55,456.9,21.63z" />
+                                    <path class="cgv-2" d="M431.01,48.5l13.2,4.95c0.7,0.27,1.42,0.38,2.12,0.38c2.46,0,4.77-1.5,5.68-3.93c1.17-3.14-0.42-6.63-3.55-7.8
+                                    l-9.25-3.46l-8.21,4.65V48.5z" />
+                                    <path class="cgv-1"
+                                        d="M418.88,48.5v9.58c0,3.34,2.72,6.05,6.07,6.05c3.35,0,6.06-2.71,6.06-6.05V48.5l-6.06-2.27L418.88,48.5z" />
+                                    <path class="cgv-1" d="M410.67,38.64l-9.24,3.46c-3.14,1.18-4.73,4.67-3.55,7.8c0.91,2.43,3.22,3.93,5.68,3.93
+                                    c0.71,0,1.42-0.12,2.12-0.38l13.2-4.95v-5.21L410.67,38.64z" />
+                                    <path class="cgv-2" d="M413.85,26.5l-12.59-7.14c-2.91-1.65-6.61-0.64-8.26,2.27c-1.65,2.92-0.62,6.62,2.29,8.26l15.39,8.74
+                                    l6.58-2.47L413.85,26.5z" />
+                                    <path class="cgv-1" d="M195.82,200.27c21.36,0,40.83-9.03,54.61-23.28c9.24-9.5,16.07-21.45,19.62-34.72l23.85,44.82
+                                    c3.71,6.97,10.93,11.33,18.81,11.33c7.89,0,15.11-4.37,18.82-11.33l58.28-109.5c5.54-10.42,1.59-23.34-8.83-28.87
+                                    c-10.43-5.54-23.38-1.58-28.91,8.83l-37.6,73.24l-1.76,6.02l-1.75-6.02l-37.6-73.24c-5.53-10.41-18.48-14.37-28.9-8.83
+                                    c-10.43,5.54-14.38,18.46-8.83,28.87l14.04,26.4h-43.33c-9.82,0-17.79,8.21-17.79,18.34c0,10.12,7.97,18.33,17.79,18.33h21.43
+                                    c-5.77,8.88-15.58,17.51-31.99,17.51c-9.52-0.02-18.01-3.89-24.46-10.49c-6.4-6.63-10.43-15.76-10.44-26.11
+                                    c-0.03-17.96,12.29-32.48,27.64-35.82c11.35-2.52,18.5-13.75,16-25.1c-1.49-6.69-6-11.93-11.79-14.58c-8.39-3.66-18.71,0-18.71,0
+                                    c-32.3,9.72-55.22,40.06-55.24,75.5c0,4.58,0.4,9.07,1.14,13.44c-6.73,11.1-19.42,25.04-40.65,25.04
+                                    c-20.4-0.04-37.21-16.76-37.21-37.72c0.01-18.63,13.25-33.9,30.5-37.11c0,0,4.35-0.84,11.34-1.43c6.72-0.57,16.4-8.41,16.4-20.22
+                                    c0-11.61-9.41-21.02-21.02-21.02C35.34,42.59,0.08,78.4,0,122.34c0.08,43.92,35.34,79.74,79.26,79.77
+                                    c23.91-0.02,45.23-10.65,59.73-27.4C138.98,174.7,159.35,200.27,195.82,200.27z" />
+                                </g>
+                                <g>
                         </svg>
                     </a>
-
                 </h1>
                 <ul class="header-menu">
                     <li class="menu-list">
@@ -120,12 +121,86 @@
             <div class="section-container">
                 <div class="theater-box">
                     <div class="theater-name">
-                        <figure class="ultra-4dx-logo"></figure>
-                        <h2>최대치의 공감각</h2>
+                        <figure class="ultra-4dx-logo">
+                            <?xml version="1.0" encoding="utf-8"?>
+                            <!-- Generator: Adobe Illustrator 27.4.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+                            <svg version="1.1" id="레이어_1" xmlns="http://www.w3.org/2000/svg"
+                                xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 396.95 63.23"
+                                style="enable-background:new 0 0 396.95 63.23;" xml:space="preserve">
+                                <defs>
+                                    <filter id="dropShadow" x="-50%" y="-50%" width="200%" height="200%">
+                                        <feGaussianBlur in="SourceAlpha" stdDeviation="3" /> <!-- Blur effect -->
+                                        <feOffset dx="3" dy="3" result="offsetblur" /> <!-- Offset position -->
+                                        <feFlood flood-color="rgba(0,0,0,0.5)" /> <!-- Shadow color -->
+                                        <feComposite in2="offsetblur" operator="in" /> <!-- Composite shadow -->
+                                        <feMerge>
+                                            <feMergeNode /> <!-- Original shape -->
+                                            <feMergeNode in="SourceGraphic" /> <!-- Shadow -->
+                                        </feMerge>
+                                    </filter>
+                                </defs>
+                                <style type="text/css">
+                                    .ultra-4dx {
+                                        fill: #FFFFFF;
+                                    }
+                                </style>
+                                <g filter="url(#dropShadow)">
+                                    <g>
+                                        <g>
+                                            <path class="ultra-4dx" d="M352.87,35.87c0.22,0.02,0.38,0.05,0.54,0.05c3.74,0,7.47,0.01,11.21-0.01c0.59,0,1.05,0.17,1.5,0.56
+                                            c5.35,4.58,10.72,9.13,16.08,13.71c4.82,4.11,9.62,8.23,14.43,12.35c0.09,0.07,0.18,0.15,0.24,0.24c0.13,0.18,0.1,0.34-0.13,0.37
+                                            c-0.25,0.04-0.51,0.05-0.77,0.05c-5.52,0.01-11.04,0.01-16.55,0.02c-3.08,0-6.16,0-9.24,0.01c-0.48,0-0.86-0.13-1.18-0.47
+			c-2.28-2.32-4.57-4.65-6.86-6.96c-1.42-1.44-2.86-2.85-4.27-4.29c-2.67-2.7-5.32-5.42-7.99-8.12c-0.69-0.7-1.44-1.33-2.2-2.03
+			c-0.03,0.03-0.15,0.14-0.27,0.25c-3.6,3.7-7.21,7.4-10.79,11.12c-0.43,0.45-0.89,0.63-1.5,0.63c-7.51-0.02-15.03-0.01-22.54-0.02
+			c-0.4,0-0.8-0.02-1.2-0.04c-0.02-0.05-0.03-0.11-0.05-0.16c0.14-0.18,0.26-0.39,0.43-0.55c3.02-2.83,6.06-5.64,9.08-8.47
+			c1.56-1.46,3.09-2.95,4.64-4.41c3.26-3.06,6.52-6.11,9.78-9.16c2.46-2.3,4.92-4.61,7.38-6.91c0.03-0.03,0.05-0.07,0.12-0.17
+			c-0.19-0.01-0.33-0.04-0.47-0.04c-3.54,0-7.07-0.01-10.61,0c-0.5,0-0.91-0.13-1.27-0.48c-2.04-1.98-4.11-3.94-6.15-5.92
+			c-2.63-2.56-5.25-5.13-7.87-7.7c-0.16-0.16-0.35-0.3-0.49-0.47c-0.12-0.15-0.19-0.35-0.32-0.62c0.79,0,1.46,0,2.12,0
+			c5.29,0,10.58,0.01,15.87-0.01c0.52,0,0.89,0.18,1.26,0.51c2.88,2.57,5.76,5.12,8.65,7.68c1.19,1.06,2.38,2.12,3.56,3.19
+			c0.22,0.2,0.37,0.28,0.63,0.03c3-2.83,6.02-5.64,9.02-8.47c3.78-3.56,7.55-7.13,11.32-10.7C368.34,0.15,368.7,0,369.16,0
+			c5.75,0.01,11.49,0.01,17.24,0.01c0.33,0,0.67,0.06,1.14,0.1c-0.21,0.28-0.33,0.48-0.48,0.64c-1.61,1.65-3.22,3.3-4.83,4.95
+			c-4.29,4.4-8.58,8.8-12.87,13.2c-2.44,2.51-4.88,5.01-7.33,7.52c-1.58,1.62-3.17,3.23-4.75,4.85c-1.42,1.46-2.82,2.92-4.23,4.38
+			C352.99,35.7,352.96,35.76,352.87,35.87z" />
+                                            <path class="ultra-4dx" d="M277.23,29.6c0-4.58,0-9.17,0-13.75c0-1.27,0.56-2.17,1.6-2.49c0.4-0.12,0.84-0.15,1.26-0.16
+			c3.89-0.01,7.78-0.01,11.68,0c1.98,0.01,3.97-0.05,5.94,0.11c6.35,0.5,11.09,3.53,13.94,9.25c1.45,2.9,1.91,6.02,1.45,9.24
+			c-0.72,5.03-3.3,8.88-7.55,11.66c-2.12,1.38-4.45,2.09-6.92,2.35c-1.53,0.16-3.07,0.22-4.6,0.23c-4.69,0.03-9.38,0.01-14.07,0.02
+			c-1.08,0-2-0.3-2.46-1.34c-0.2-0.46-0.25-1.02-0.25-1.53c-0.02-4.46-0.01-8.91-0.01-13.37C277.24,29.74,277.24,29.67,277.23,29.6
+			C277.23,29.6,277.23,29.6,277.23,29.6z M285.44,29.7c0,0-0.01,0-0.01,0c0,0.21,0,0.43,0,0.64c0,2.5,0.01,4.99,0.02,7.49
+			c0,0.59,0.3,0.88,0.89,0.92c0.09,0.01,0.17,0.01,0.26,0.01c3.26,0,6.53,0.06,9.79-0.02c3.22-0.08,5.88-1.39,7.68-4.13
+			c1.86-2.83,2.15-5.88,0.61-8.89c-1.6-3.13-4.32-4.86-7.85-5c-3.46-0.13-6.92-0.05-10.39-0.04c-0.75,0-0.99,0.25-0.99,1.02
+			C285.43,24.36,285.44,27.03,285.44,29.7z" />
+                                            <path class="ultra-4dx" d="M270.56,33.4c0,6.25,0,12.49,0,18.74c0,0.59,0,0.59-0.57,0.59c-2.39,0-4.79,0-7.18,0.01
+			c-0.36,0-0.45-0.11-0.45-0.46c0.01-2.24-0.01-4.49,0.01-6.73c0-0.42-0.13-0.51-0.53-0.51c-8.71,0.01-17.42,0.01-26.13,0.01
+			c-0.84,0-0.89-0.06-0.89-0.9c0.01-2.3,0.03-4.6,0.01-6.9c-0.01-0.94,0.37-1.61,1.12-2.16c5.59-4.07,11.16-8.16,16.75-12.24
+			c4.64-3.39,9.29-6.77,13.94-10.14c1.14-0.83,2.48-0.69,3.38,0.33c0.44,0.5,0.55,1.1,0.55,1.74c0,5.54,0,11.07,0,16.61
+			C270.56,32.07,270.56,32.74,270.56,33.4z M254.34,37.82C254.34,37.82,254.34,37.82,254.34,37.82c2.58,0,5.16-0.01,7.74,0.01
+			c0.36,0,0.45-0.11,0.45-0.46c-0.01-3.58-0.01-7.15-0.01-10.73c0-0.21-0.01-0.43-0.04-0.64c-0.09-0.64-0.55-0.86-1.1-0.5
+			c-0.56,0.36-1.11,0.74-1.66,1.13c-3.74,2.69-7.48,5.39-11.21,8.09c-0.87,0.62-1.74,1.24-2.58,1.9c-0.17,0.13-0.3,0.45-0.26,0.64
+			c0.04,0.19,0.3,0.38,0.51,0.47c0.21,0.09,0.47,0.07,0.72,0.07C249.37,37.82,251.85,37.82,254.34,37.82z" />
+                                        </g>
+                                        <g>
+                                            <path class="ultra-4dx" d="M31.21,5.99h10.68V38.8c0,3.69-0.88,6.91-2.63,9.67c-1.75,2.76-4.2,4.91-7.34,6.45
+			c-3.14,1.54-6.8,2.31-10.98,2.31c-4.19,0-7.86-0.77-11-2.31c-3.14-1.54-5.58-3.69-7.33-6.45C0.87,45.71,0,42.49,0,38.8V5.99h10.68
+			v31.9c0,1.92,0.42,3.64,1.27,5.13c0.85,1.5,2.04,2.67,3.59,3.53c1.55,0.86,3.35,1.28,5.4,1.28c2.07,0,3.88-0.43,5.42-1.28
+			c1.54-0.85,2.73-2.03,3.58-3.53c0.85-1.5,1.27-3.21,1.27-5.13V5.99z" />
+                                            <path class="ultra-4dx" d="M50.68,56.52V5.99h10.68v41.72h21.66v8.81H50.68z" />
+                                            <path class="ultra-4dx"
+                                                d="M81.89,14.8V5.99h41.5v8.81h-15.47v41.72H97.36V14.8H81.89z" />
+                                            <path class="ultra-4dx"
+                                                d="M130.25,56.52V5.99h19.94c3.82,0,7.08,0.68,9.78,2.04c2.71,1.36,4.77,3.27,6.19,5.75
+			c1.42,2.48,2.13,5.38,2.13,8.72c0,3.36-0.72,6.24-2.17,8.65s-3.54,4.26-6.28,5.54c-2.74,1.28-6.05,1.92-9.93,1.92h-13.35v-8.59
+			h11.62c2.04,0,3.73-0.28,5.08-0.84c1.35-0.56,2.36-1.4,3.02-2.52c0.67-1.12,1-2.51,1-4.17c0-1.68-0.33-3.09-1-4.24
+			c-0.67-1.15-1.68-2.03-3.03-2.63c-1.36-0.6-3.06-0.9-5.12-0.9h-7.2v41.8H130.25z M157.53,33.52l12.56,23H158.3l-12.29-23H157.53z" />
+                                            <path class="ultra-4dx" d="M184.55,56.52H173.1l17.44-50.53h13.77l17.42,50.53h-11.45l-12.66-38.98h-0.39L184.55,56.52z M183.84,36.66
+			h27.04V45h-27.04V36.66z" />
+                                        </g>
+                                    </g>
+                                <g>
+                            </svg>
+                        </figure>
+                        <p>최대치의 공감각</p>
                     </div>
-                    <button class="learn-more-btn">
-                        <a href="">Learn More</a>
-                    </button>
+                    <a href="#" class="learn-more-btn">Learn More</a>
                 </div>
                 <div class="content-area">
                     <div class="article-box">
@@ -135,53 +210,53 @@
                             모션 시트, 바람, 빛 등 다양한 효과가 몰입감을 더합니다.
                         </p>
                     </div>
-                    <ul class="4dx-content-box">
-                        <li class="4dx-icon">
-                            <figure class="wind-icon"></figure>
-                            <p>Wind</p>
-                        </li>
-                        <li class="4dx-icon">
-                            <figure class="bubbles-icon"></figure>
-                            <p>Bubbles</p>
-                        </li>
-                        <li class="4dx-icon">
-                            <figure class="lightning-icon"></figure>
-                            <p>Lightning</p>
-                        </li>
-                        <li class="4dx-icon">
-                            <figure class="fog-icon"></figure>
-                            <p>Fog</p>
-                        </li>
-                        <li class="4dx-icon">
-                            <figure class="vibration-icon"></figure>
-                            <p>Vibration</p>
-                        </li>
-                        <li class="4dx-icon">
-                            <figure class="scents-icon"></figure>
-                            <p>Scents</p>
-                        </li>
-                        <li class="4dx-icon">
-                            <figure class="water-icon"></figure>
-                            <p>Water</p>
-                        </li>
-                        <li class="4dx-icon">
-                            <figure class="motion-icon"></figure>
-                            <p>Motion</p>
-                        </li>
-                    </ul>
+                    <div class="fourdx-content-box">
+                        <ul class="fourdx-icon-list">
+                            <li class="fourdx-icon">
+                                <figure class="wind icon"></figure>
+                                <p>Wind</p>
+                            </li>
+                            <li class="fourdx-icon">
+                                <figure class="bubbles icon"></figure>
+                                <p>Bubbles</p>
+                            </li>
+                            <li class="fourdx-icon">
+                                <figure class="lightning icon"></figure>
+                                <p>Lightning</p>
+                            </li>
+                            <li class="fourdx-icon">
+                                <figure class="fog icon"></figure>
+                                <p>Fog</p>
+                            </li>
+                            <li class="fourdx-icon">
+                                <figure class="vibration icon"></figure>
+                                <p>Vibration</p>
+                            </li>
+                            <li class="fourdx-icon">
+                                <figure class="scents icon"></figure>
+                                <p>Scents</p>
+                            </li>
+                            <li class="fourdx-icon">
+                                <figure class="water icon"></figure>
+                                <p>Water</p>
+                            </li>
+                            <li class="fourdx-icon">
+                                <figure class="motion icon"></figure>
+                                <p>Motion</p>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
-        <div class="section-container-wrap">
+        <div class="section-container-wrap imax">
             <div class="section-container">
                 <div class="theater-box">
                     <div class="theater-name">
                         <figure class="imax-logo"></figure>
-                        <h2>궁극의 몰입감</h2>
+                        <p>궁극의 몰입감</p>
                     </div>
-                    <button class="learn-more-btn">
-                        <a href="">Learn More</a>
-                    </button>
+                    <a href="#" class="learn-more-btn">Learn More</a>
                 </div>
                 <div class="content-area">
                     <div class="article-box">
@@ -193,49 +268,47 @@
                             <figure class="image-icon"></figure>
                             <div class="imax-info-title">
                                 <p>Crystal Clear</p>
-                                <h2>IMAGE</h2>
+                                <p>IMAGE</p>
                             </div>
                             <p>Customized Projector로
                                 <br>비교할 수 없는 밝음과 뛰어난
                                 <br>선명한 화질 제공
                             </p>
-                            </il>
-                            <il class="imax-info">
-                                <figure class="screen-icon"></figure>
-                                <div class="imax-info-title">
-                                    <p>Maximized</p>
-                                    <h2>SCREEN</h2>
-                                </div>
-                                <p>대형 스크린에 맞는
-                                    <br>맞춤형 설계로 모든 좌석에서
-                                    <br>최고의 몰입 가능
-                                </p>
-                            </il>
+                        </il>
+                        <il class="imax-info">
+                            <figure class="screen-icon"></figure>
+                            <div class="imax-info-title">
+                                <p>Maximized</p>
+                                <p>SCREEN</p>
+                            </div>
+                            <p>대형 스크린에 맞는
+                                <br>맞춤형 설계로 모든 좌석에서
+                                <br>최고의 몰입 가능
+                            </p>
+                        </il>
                         <li class="imax-info">
                             <figure class="sound-icon"></figure>
                             <div class="imax-info-title">
                                 <p>Powerful</p>
-                                <h2>SOUND</h2>
+                                <p>SOUND</p>
                             </div>
                             <p>완벽하게 조율된 소리와
                                 <br>핀 포인트 정확도로
                                 <br>최적의 사운드를 제공
                             </p>
-                            </il>
+                        </il>
                     </ul>
                 </div>
             </div>
         </div>
-        <div class="section-container-wrap">
+        <div class="section-container-wrap starium">
             <div class="section-container">
                 <div class="theater-box">
                     <div class="theater-name">
                         <figure class="starium-logo"></figure>
-                        <h2>압도적인 스케일</h2>
+                        <p>압도적인 스케일</p>
                     </div>
-                    <button class="learn-more-btn">
-                        <a href="">Learn More</a>
-                    </button>
+                    <a href="#" class="learn-more-btn">Learn More</a>
                 </div>
                 <div class="content-area">
                     <div class="article-box">
@@ -248,21 +321,21 @@
                         <li class="starium-info">
                             <figure class="super-giant-icon"></figure>
                             <div class="starium-info-text-box">
-                                <h2>Super Giant</h2>
+                                <p>Super Giant</p>
                                 <p>SCREEN</p>
                             </div>
                         </li>
                         <li class="starium-info">
                             <figure class="4k-icon"></figure>
                             <div class="starium-info-text-box">
-                                <h2>4K Ultra-High</h2>
+                                <p>4K Ultra-High</p>
                                 <p>RESOLUTION</p>
                             </div>
                         </li>
                         <li class="starium-info">
                             <figure class="most-dynamic-icon"></figure>
                             <div class="starium-info-text-box">
-                                <h2>Most Dynamic</h2>
+                                <p>Most Dynamic</p>
                                 <p>SOUND</p>
                             </div>
                         </li>
@@ -285,44 +358,36 @@
                 <div class="theater-box">
                     <div class="theater-name">
                         <figure class="cine-de-chef-logo"></figure>
-                        <h2>특별한 순간을 품격 있게</h2>
+                        <p>특별한 순간을 품격 있게</p>
                     </div>
-                    <button class="learn-more-btn">
-                        <a href="">Learn More</a>
-                    </button>
+                    <a href="#" class="learn-more-btn">Learn More</a>
                 </div>
             </article>
             <article>
                 <div class="theater-box">
                     <div class="theater-name">
                         <figure class="cine-livingroom-logo"></figure>
-                        <h2>편안하고 특별한 매력</h2>
+                        <p>편안하고 특별한 매력</p>
                     </div>
-                    <button class="learn-more-btn">
-                        <a href="">Learn More</a>
-                    </button>
+                    <a href="#" class="learn-more-btn">Learn More</a>
                 </div>
             </article>
             <article>
                 <div class="theater-box">
                     <div class="theater-name">
                         <figure class="suite-logo"></figure>
-                        <h2>프라이빗 & 프리미엄</h2>
+                        <p>프라이빗 & 프리미엄</p>
                     </div>
-                    <button class="learn-more-btn">
-                        <a href="">Learn More</a>
-                    </button>
+                    <a href="#" class="learn-more-btn">Learn More</a>
                 </div>
             </article>
             <article>
                 <div class="theater-box">
                     <div class="theater-name">
                         <figure class="cine-foret-logo"></figure>
-                        <h2>도심 속 푸르름의 가치</h2>
+                        <p>도심 속 푸르름의 가치</p>
                     </div>
-                    <button class="learn-more-btn">
-                        <a href="">Learn More</a>
-                    </button>
+                    <a href="#" class="learn-more-btn">Learn More</a>
                 </div>
             </article>
         </div>
