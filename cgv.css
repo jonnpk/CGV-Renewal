@@ -1,5 +1,13 @@
+@font-face {
+    font-family: 'Pretendard-Regular';
+    src: url('https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+
 body{
     background-color: #151515;
+    font-family: 'Pretendard-Regular';
 }
 
 header{
@@ -123,7 +131,7 @@ header{
 }
 
 #intro-section{
-    background-image: url(source/background/intro.jpg);
+    background-image: url(source/background/intro_background.jpg);
     height: 100vh;
     background-size: cover;
     background-position: 50% 50%;
@@ -152,6 +160,14 @@ header{
     align-items: center;
 }
 
+.title-container.tech{
+    background-image: url(source/background/title-tech_background.jpg);
+}
+
+.title-container.prestige{
+    background-image: url(source/background/title-prestige_background.jpg);
+}
+
 .title-area{
     text-align: center;
     line-height: 30px;
@@ -178,22 +194,22 @@ header{
 }
 
 .section-container-wrap.ultra-4dx{
-    background-image: url(source/background/ULTRA_4DX.jpg);
+    background-image: url(source/background/ultra_4dx_background.jpg);
     
 }
 
 .section-container-wrap.imax{
-    background-image: url(source/background/IMAX.jpg);
+    background-image: url(source/background/imax_background.jpg);
 }
 
 .section-container-wrap.starium{
-    background-image: url(source/background/starium.jpg);
+    background-image: url(source/background/starium_background.jpg);
 }
 
 .section-container{
     width: 1200px;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     padding: 32px 0
 }
 
@@ -202,6 +218,7 @@ header{
     flex-direction: column;
     gap: 32px;
     margin-top: 108px;
+    margin-left: 50px;
 }
 
 .ultra-4dx-logo{
@@ -217,7 +234,7 @@ header{
 .theater-name p{
     color: white;
     font-size: 16px;
-    font-weight: 500;
+    font-weight: 600;
     text-shadow: 1px 4px 10px rgba(0, 0, 0, 0.4);
 }
 
@@ -237,9 +254,12 @@ header{
 .content-area{
     display: flex;
     flex-direction: column;
+    align-items: center;
     align-self: flex-end;
     margin-bottom: 57px;
+    margin-right: 150px;
     gap: 16px;
+
 }
 
 .article-box{
@@ -297,10 +317,39 @@ header{
     display: flex;
     justify-content: center;
     align-items: center;
+    box-shadow: 1px 4px 10px rgba(0, 0, 0, 0.4);
 }
 
 .icon-circle.wind{
     background-color: rgba(255, 205, 205, 0.85)
+}
+
+.icon-circle.bubbles{
+    background-color: rgba(212, 227, 241, 0.85);
+}
+
+.icon-circle.lightning{
+    background-color: rgba(249, 241, 223, 0.85);
+}
+
+.icon-circle.fog{
+    background-color: rgba(238, 238, 237, 0.85);
+}
+
+.icon-circle.vibration{
+    background-color: rgba(204, 216, 255, 0.85);
+}
+
+.icon-circle.scents{
+    background-color: rgba(223, 233, 223, 0.85);
+}
+
+.icon-circle.water{
+    background-color: rgba(205, 223, 233, 0.85);
+}
+
+.icon-circle.motion{
+    background-color: rgba(236, 221, 236, 0.85);
 }
 
 .icon-circle.wind img{
@@ -308,4 +357,90 @@ header{
     height: 14px;
 }
 
+.icon-circle.bubbles img{
+    width: 22px;
+    height: 21px;
+}
 
+.icon-circle.lightning img{
+    width: 27px;
+    height: 22px;
+}
+
+.icon-circle.fog img{
+    width: 21px;
+    height: 21px;
+}
+
+.icon-circle.vibration img{
+    width: 19px;
+    height: 14px;
+}
+
+.icon-circle.scents img{
+    width: 22px;
+    height: 22px;
+}
+
+.icon-circle.water img{
+    width: 17px;
+    height: 20px;
+}
+
+.icon-circle.motion img{
+    width: 22px;
+    height: 13px;
+}
+
+.imax-logo{
+    width: 102px;
+    height: 29px;
+}
+
+.imax-content-box{
+    display: flex;
+    gap: 16px;
+}
+
+.imax-info-box{
+    background-color: rgba(228, 35, 19, 0.5);
+    width: 148px;
+}
+
+.imax-info{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 24px
+}
+
+.imax-icon{
+    width: 68px;
+    height: 68px;
+}
+
+.imax-info-title{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.imax-info p{
+    color: white;
+    text-shadow: 1px 4px 10px rgba(0, 0, 0, 0.4);
+}
+
+.imax-info-title p:first-child{
+    font-size: 14px;
+}
+
+.imax-info-title p:nth-child(2){
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.imax-info-text{
+    text-align: center;
+    font-size: 12px;
+}
