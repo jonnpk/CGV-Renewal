@@ -44,10 +44,15 @@ header{
 
 .menu-list a{
     font-size: 20px;
-    font-weight: 600;
+    font-weight: 500;
     color: white;
     text-decoration: none;
     text-shadow: 1px 4px 10px rgba(0, 0, 0, 0.4);
+}
+
+.menu-list a:hover{
+    color: #bdbdbd;
+    text-shadow: none;
 }
 
 .ticket-btn{
@@ -60,6 +65,13 @@ header{
     font-size: 20px;
     font-weight: 600;
     box-shadow: 1px 4px 10px rgba(0, 0, 0, 0.4);
+    transition: background-color 0.2s;
+}
+
+.ticket-btn:hover{
+    background-color: rgba(228, 35, 19, 0.8);
+    box-shadow: none;
+    transition: 0.2s;
 }
 
 .mouse-box{
@@ -131,7 +143,7 @@ header{
 }
 
 #intro-section{
-    background-image: url(source/background/intro_background.jpg);
+    background-image: url(source/background/intro.jpg);
     height: 100vh;
     background-size: cover;
     background-position: 50% 50%;
@@ -158,25 +170,26 @@ header{
     display: flex;
     justify-content: center;
     align-items: center;
+    width: 100%;
+}
+
+.title-container h2{
+    font-size: 24px;
+    font-weight: 600;
+    color: white;
 }
 
 .title-container.tech{
-    background-image: url(source/background/title-tech_background.jpg);
+    background-image: url(source/background/title-tech.jpg);
 }
 
 .title-container.prestige{
-    background-image: url(source/background/title-prestige_background.jpg);
+    background-image: url(source/background/title-prestige.jpg);
 }
 
 .title-area{
     text-align: center;
     line-height: 30px;
-}
-
-.title-area h2{
-    font-size: 24px;
-    font-weight: 600;
-    color: white;
 }
 
 .title-area p{
@@ -194,16 +207,16 @@ header{
 }
 
 .section-container-wrap.ultra-4dx{
-    background-image: url(source/background/ultra_4dx_background.jpg);
+    background-image: url(source/background/ultra-4dx.jpg);
     
 }
 
 .section-container-wrap.imax{
-    background-image: url(source/background/imax_background.jpg);
+    background-image: url(source/background/imax.jpg);
 }
 
 .section-container-wrap.starium{
-    background-image: url(source/background/starium_background.jpg);
+    background-image: url(source/background/starium.jpg);
 }
 
 .section-container{
@@ -213,12 +226,23 @@ header{
     padding: 32px 0
 }
 
+.section-container.customer{
+    justify-content: center;
+    align-items: center;
+}
+
 .theater-box{
     display: flex;
     flex-direction: column;
     gap: 32px;
     margin-top: 108px;
-    margin-left: 50px;
+    margin-left: 150px;
+}
+
+.theater-box.prestige{
+    margin-top: 0;
+    margin-left: 0;
+    padding: 32px;
 }
 
 .ultra-4dx-logo{
@@ -231,10 +255,14 @@ header{
     gap: 8px;
 }
 
+.theater-name.ultra-4dx{
+    gap: 4px;
+}
+
 .theater-name p{
     color: white;
     font-size: 16px;
-    font-weight: 600;
+    font-weight: 500;
     text-shadow: 1px 4px 10px rgba(0, 0, 0, 0.4);
 }
 
@@ -249,6 +277,13 @@ header{
     padding: 8px 16px;
     width: auto;
     box-shadow: 1px 4px 10px rgba(0, 0, 0, 0.4);
+    transition: background-color 0.2s;
+}
+
+.learn-more-btn:hover{
+    background-color: rgba(255, 255, 255, 0.25);
+    box-shadow: none;
+    transition: 0.2s;
 }
 
 .content-area{
@@ -287,6 +322,13 @@ header{
     background-color: rgba(228, 35, 19, 0.5);
     border-radius: 14px;
     box-shadow: 1px 4px 10px rgba(0, 0, 0, 0.4);
+    transition: background-color 0.2s;
+}
+
+.fourdx-content-box:hover{
+    background-color: rgba(228, 35, 19, 0.8);
+    box-shadow: none;
+    transition: 0.3s
 }
 
 .fourdx-icon-list{
@@ -393,8 +435,8 @@ header{
 }
 
 .imax-logo{
-    width: 102px;
-    height: 29px;
+    width: 88px;
+    height: 25px;
 }
 
 .imax-content-box{
@@ -402,9 +444,18 @@ header{
     gap: 16px;
 }
 
-.imax-info-box{
+.imax-info-wrap{
     background-color: rgba(228, 35, 19, 0.5);
     width: 148px;
+    border-radius: 14px;
+    box-shadow: 1px 4px 10px rgba(0, 0, 0, 0.4);
+    transition: background-color 0.2s;
+}
+
+.imax-info-wrap:hover{
+    background-color: rgba(228, 35, 19, 0.8);
+    box-shadow: none;
+    transition: 0.2s;
 }
 
 .imax-info{
@@ -412,7 +463,7 @@ header{
     flex-direction: column;
     align-items: center;
     gap: 8px;
-    padding: 8px 24px
+    padding: 16px 20px;
 }
 
 .imax-icon{
@@ -420,10 +471,23 @@ header{
     height: 68px;
 }
 
+.imax-icon.camera{
+    background-image: url(source/icon/imax-icon_camera.svg);
+}
+
+.imax-icon.screen{
+    background-image: url(source/icon/imax-icon_screen.svg);
+}
+
+.imax-icon.sound{
+    background-image: url(source/icon/imax-icon_sound.svg);
+}
+
 .imax-info-title{
     display: flex;
     flex-direction: column;
     align-items: center;
+    gap: 2px;
 }
 
 .imax-info p{
@@ -437,10 +501,318 @@ header{
 
 .imax-info-title p:nth-child(2){
     font-size: 20px;
-    font-weight: 500;
+    font-weight: 600;
 }
 
 .imax-info-text{
     text-align: center;
     font-size: 12px;
+    line-height: 15px;
 }
+
+.starium-logo{
+    width: 115px;
+    height: 25px;
+}
+
+.starium-content-box{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.starium-info-wrap{
+    width: 222px;
+    background-color: rgba(228, 35, 19, 0.6);
+    box-shadow: 1px 4px 10px rgba(0, 0, 0, 0.4);
+    border-radius: 8px;
+    transition: background-color 0.2s;
+}
+
+.starium-info-wrap:hover{
+    background-color: rgba(228, 35, 19, 0.9);
+    box-shadow: none;
+    transition: 0.2s;
+}
+
+.starium-info{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 16px
+}
+
+.starium-icon{
+    width: 48px;
+    height: 48px;
+}
+
+.starium-icon.super-giant{
+    background-image: url(source/icon/starium-icon_screen.svg);
+}
+
+.starium-icon.four-k{
+    background-image: url(source/icon/starium-icon_resol.svg);
+}
+
+.starium-icon.most-dynamic{
+    background-image: url(source/icon/starium-icon_sound.svg);
+}
+
+.starium-info-text-box{
+    color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.starium-info-text-box p:first-child{
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.starium-info-text-box p:nth-child(2){
+    font-size: 14px;
+}
+
+#prestige-section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.article-container{
+    width: 1200px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 32px;
+}
+
+.prestige-theater{
+    width: 584px;
+    height: 378px;
+    border-radius: 28px;
+    display: flex;
+    align-items: center;
+    box-shadow: 1px 4px 10px rgba(0, 0, 0, 0.4);
+    transition: transform 0.5s;
+}
+
+.prestige-theater:hover{
+    transform: scale(101%);
+    box-shadow: none;
+    transition: 0.5s;
+}
+
+.prestige-theater.chef{
+    background-image: url(source/background/chef.jpg);
+}
+
+.prestige-theater.livingroom{
+    background-image: url(source/background/livingroom.jpg);
+}
+
+.prestige-theater.suite{
+    background-image: url(source/background/suite.jpg);
+}
+
+.prestige-theater.foret{
+    background-image: url(source/background/foret.jpg);
+}
+
+.chef-logo{
+    width: 220px;
+    height: 30px;
+}
+
+.livingroom-logo{
+    width: 253px;
+    height: 27px;
+}
+
+.suite-logo{
+    width: 184px;
+    height: 32px;
+}
+
+.foret-logo{
+    width: 226px;
+    height: 34px;
+}
+
+#customer-section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.customer-info-area{
+    display: flex;
+    gap: 222px;
+}
+
+.customer-info{
+    background-color: rgba(228, 35, 19, 0.5);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    padding: 24px;
+    border-radius: 20px;
+    box-shadow: 1px 4px 10px rgba(0, 0, 0, 0.4);
+    transition: background-color 0.2s;
+}
+
+.customer-info:hover{
+    background-color: rgba(228, 35, 19, 0.7);
+    box-shadow: none;
+    transition: 0.2s;
+}
+
+.customer-info-title{
+    font-size: 20px;
+    font-weight: 600;
+    color: white;
+}
+
+.customer-content-box{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    background-color: white;
+    padding: 20px;
+    border-radius: 14px;
+}
+
+.customer-content-box.app{
+    gap: 8px;
+}
+
+.customer-content-text-box{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    font-weight: 600;
+}
+
+.customer-content-text-16{
+    font-size: 16px;
+}
+
+.customer-content-text-14{
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.customer-content-text-10{
+    font-size: 10px;
+    font-weight: 600;
+    text-align: center;
+    line-height: 12px;
+}
+
+.cs-btn-box{
+    display: flex;
+    gap: 8px;
+}
+
+.cs-btn{
+    background-color: rgb(228, 35, 19);
+    font-size: 12px;
+    color: white;
+    padding: 10px;
+    border-radius: 4px;
+    transition: background-color 0.2s;
+}
+
+.cs-btn:hover{
+    background-color: rgb(185, 28, 14);
+    transition: 0.2s;
+}
+
+.app-qr,
+.app-qr img{
+    width: 88px;
+    height: 88px;
+}
+
+footer{
+    display: flex;
+    justify-content: center;
+}
+
+.footer-container{
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+    margin-top: 140px;
+    margin-bottom: 64px;
+    gap: 28px;
+}
+
+.footer-nav{
+    display: flex;
+    gap: 16px;
+}
+
+.footer-nav a{
+    text-decoration: none;
+    color: white;
+    font-size: 14px;
+}
+
+.footer-line{
+    width: 100%;
+    height: 1px;
+    background-color: white;
+}
+
+.company-info{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.company-info-text{
+    color: white;
+    font-size: 14px;
+    line-height: 24px;
+}
+
+.footer-emport{
+    text-decoration: underline;
+}
+
+.company-link{
+    align-self: flex-end;
+}
+
+.go-btn{
+    background-color: white;
+    font-size: 16px;
+    font-weight: 600;
+    padding: 8px;
+    color: rgb(78, 78, 78);
+    transition: background-color 0.2s;
+}
+
+.go-btn:hover{
+    background-color: rgb(199, 198, 198);
+    transition: 0.2s;
+}
+
+select{
+    background-color: #151515;
+    border: 1px solid white;
+    color: white;
+    font-size: 14px;
+    padding: 8px 10px;
+    transition: 0.2s;
+}
+
+
