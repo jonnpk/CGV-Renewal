@@ -739,7 +739,8 @@ header{
 footer{
     display: flex;
     justify-content: center;
-    background-color: rgba(228, 35, 19, 0.5);;
+    background-color: rgba(228, 35, 19, 0.5);
+    background-color: #1e1e1e;
 }
 
 .footer-container{
@@ -748,8 +749,8 @@ footer{
     flex-direction: column;
     align-items: center;
     padding: 0;
-    margin-top: 64px;
-    margin-bottom: 58px;
+    margin-top: 62px;
+    margin-bottom: 56px;
     gap: 28px;
 }
 
@@ -762,6 +763,10 @@ footer{
     text-decoration: none;
     color: white;
     font-size: 14px;
+}
+
+.footer-nav a:hover{
+    color: #cacaca;
 }
 
 .footer-line{
