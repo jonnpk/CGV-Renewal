@@ -122,7 +122,7 @@
 
     <section id="tech-section">
         <div class="title-container tech">
-            <div class="title-area fade-interactive fade to-left">
+            <div class="title-area fade-interactive fade">
                 <h2>CGV만의 Technology로 경험하는 최적의 관람.</h2>
                 <p>진화된 3S(Screen, Sound, Seat) 기술로 컨텐츠 몰입도를 극대화하여 영화 관람에 최적화된 환경을 제공합니다.</p>
             </div>
@@ -475,7 +475,7 @@
 
     <section id="prestige-section">
         <div class="title-container prestige">
-            <div class="title-area fade-interactive fade to-left">
+            <div class="title-area fade-interactive fade">
                 <h2>CGV가 선사하는 특별한 공간적 경험.</h2>
                 <p>세련된 인테리어와 고급스러운 서비스로 진정한 우아함을 느낄 수 있는 CGV의 Prestige관은, 특별한 테마를 바탕으로 다양한 영화 관람 경험을 선사합니다.</p>
             </div>
@@ -872,13 +872,15 @@
 
 
     <div class="title-container end">
-        <h2>이 모든 것을 오직 CGV에서 경험하세요.</h2>
+        <div class="title-area fade-interactive fade">
+            <h2>이 모든 것을 오직 CGV에서 경험하세요.</h2>
+        </div>
     </div>
     
 
     <section id="customer-section">
         <div class="section-container customer">
-            <div class="customer-info-area">
+            <div class="customer-info-area fade-interactive fade to-bottom">
                 <div class="customer-info cs">
                     <p class="customer-info-title">고객센터</p>
                     <div class="customer-content-box">
@@ -956,6 +958,7 @@
 
             for (let i = 0; i < content.length; i++) {
                 const contentTop = content[i].getBoundingClientRect().top;
+
                 if (contentTop - winH < 0) {
                     content[i].classList.add("in");
                 }
@@ -963,6 +966,7 @@
                     content[i].classList.remove("in");
                 }
             }
+            
         });
     </script>
 </body>
