@@ -112,11 +112,7 @@
 
 
     <section id="intro-section">
-        <div class="interactive-text-area">
-            <p>영화, 그 이상의 특별한 경험</p>
-            <p>관람을 넘어선 공감각적 경험</p>
-            <p>오직 CGV에서.</p>
-        </div>
+        <div class="interactive-text-area"></div>
     </section>
 
 
@@ -876,7 +872,7 @@
             <h2>이 모든 것을 오직 CGV에서 경험하세요.</h2>
         </div>
     </div>
-    
+
 
     <section id="customer-section">
         <div class="section-container customer">
@@ -938,7 +934,7 @@
                 </div>
                 <div class="company-link">
                     <select name="subsidiary">
-                        <option value=""disabled selected>계열사 바로가기</option>
+                        <option value="" disabled selected>계열사 바로가기</option>
                         <option value="cj-group">CJ그룹</option>
                         <option value="food">식품 & 식품서비스</option>
                         <option value="biotechnology">생명공학</option>
@@ -952,6 +948,7 @@
     </footer>
 
     <script>
+        // 페이드인 스크롤
         const content = document.getElementsByClassName("fade-interactive");
         window.addEventListener("scroll", () => {
             const winH = window.innerHeight;
@@ -966,50 +963,134 @@
                     content[i].classList.remove("in");
                 }
             }
-            
         });
 
 
+
+        // 글씨 써지는 부분
+        let typeText = document.querySelector(".interactive-text-area");
+        let textToBeTypedArr = ["영화, 그 이상의 특별한 경험", "관람을 넘어선 공감각적 경험", "오직 CGV에서."];
+        let index = 0, isAdding = true, textToBeTypedIndex = 0;
+        let isPlaying = false; // 애니메이션이 실행 중인지 체크
+        let timeoutId;  // setTimeout ID를 저장할 변수
+        let lastScrollTop = 0;  // 마지막 스크롤 위치를 저장
+
+        // 애니메이션 초기화
+        function resetAnimation() {
+            index = 0;  // 인덱스를 0으로 초기화
+            isAdding = true;  // 글자를 추가하는 상태로 초기화
+            textToBeTypedIndex = 0;  // 첫 번째 문구부터 시작
+            typeText.innerText = ""; // 텍스트를 비워서 애니메이션 처음부터 시작
+            isPlaying = false; // 애니메이션 상태를 종료 상태로 설정
+            clearTimeout(timeoutId); // 애니메이션 중단
+        }
+
+        function playAnim() {
+            timeoutId = setTimeout(function () {
+                typeText.innerText = textToBeTypedArr[textToBeTypedIndex].slice(0, index);
+
+                if (isAdding) {
+                    if (index > textToBeTypedArr[textToBeTypedIndex].length) {
+                        isAdding = false;
+                        timeoutId = setTimeout(function () {
+                            playAnim();
+                        }, 1000); // 문구 타이핑 후 1초 대기
+                        return;
+                    } else {
+                        index++;
+                    }
+                } else {
+                    if (index === 0) {
+                        isAdding = true;
+                        textToBeTypedIndex = (textToBeTypedIndex + 1) % textToBeTypedArr.length;
+                    } else {
+                        index--;
+                    }
+                }
+                playAnim();
+            }, isAdding ? 120 : 40);
+        }
+
+        // 스크롤 방향을 감지하는 함수
+        function detectScrollDirection() {
+            let st = window.pageYOffset || document.documentElement.scrollTop;
+            let direction = (st > lastScrollTop) ? 'down' : 'up'; // 스크롤 방향을 감지
+            lastScrollTop = st <= 0 ? 0 : st; // 스크롤 값을 갱신
+            return direction;
+        }
+
+        // 스크롤 이벤트로 intro-section에 도달했을 때 애니메이션 시작/중지
+        let observer = new IntersectionObserver((entries) => {
+            let entry = entries[0];
+            let direction = detectScrollDirection(); // 스크롤 방향 감지
+
+            if (entry.isIntersecting && !isPlaying) {
+                // 요소가 화면에 들어올 때 애니메이션 시작
+                isPlaying = true;  // 애니메이션이 이미 실행 중임을 표시
+                typeText.style.fontSize = "24px";
+                typeText.style.fontWeight = "bold";
+                playAnim(); // 애니메이션 실행
+            }
+
+            // 요소가 뷰에서 벗어났을 때 애니메이션 상태 초기화
+            else if (!entry.isIntersecting && isPlaying) {
+                // 위로 스크롤해서 벗어났을 때도 초기화
+                resetAnimation(); // 스크롤 방향과 상관없이 초기화
+            }
+
+        }, {
+            threshold: 0,  // 요소가 화면에 0%라도 들어오면 교차로 간주
+            rootMargin: "0px 0px -50% 0px"  // 뷰포트의 아래쪽에서 50% 이상 벗어나면 초기화
+        });
+
+        // #intro-section을 관찰 대상으로 지정
+        observer.observe(document.querySelector("#intro-section"));
+
+        
+
+        // 풀페이지 스크롤
         let currentSection = 0;
-        const sections = document.querySelectorAll('.section');
-        const totalSections = sections.length;
-        let isScrolling = false; // 스크롤 제어 플래그
+        const videoSection = document.querySelector("#video-section");
+        let isScrolling = false;
 
-        document.addEventListener('wheel', (event) => {
-            if (isScrolling) return; // 스크롤 중복 방지
-
-            if (event.deltaY > 0) {
-                // 스크롤 다운
-                moveToSection(currentSection + 1);
-            } else {
-                // 스크롤 업
-                moveToSection(currentSection - 1);
+        // 스크롤 다운으로 #video-section을 넘길 때
+        document.addEventListener("wheel", (event) => {
+            if (currentSection === 0 && !isScrolling) {
+                if (event.deltaY > 0) {
+                    // 스크롤 다운 시 다음 섹션으로 부드럽게 이동
+                    moveToNextSection();
+                }
             }
         });
 
-        function moveToSection(sectionIndex) {
-            if (sectionIndex < 0 || sectionIndex >= totalSections) return; 
+        // #video-section에서 다음 섹션으로 이동
+        function moveToNextSection() {
+            isScrolling = true;
+            videoSection.style.transform = `translateY(-100vh)`; // 부드럽게 이동
 
-            isScrolling = true; // 스크롤 중복 방지 활성화
-            currentSection = sectionIndex;
-            const offset = currentSection * window.innerHeight;
-
-            sections.forEach((section) => {
-                section.style.transform = `translateY(-${offset}px)`;
-            });
-
-            // 스크롤 완료 후 1초 후에 다시 스크롤 가능하게 설정
             setTimeout(() => {
                 isScrolling = false;
-            }, 700); // 700ms 동안 스크롤 차단
+                currentSection = 1; // 다음 섹션으로 넘어감
+                document.body.classList.remove("scroll-disabled"); // 일반 스크롤 활성화
+                document.body.classList.add("scroll-enabled");
+                videoSection.style.position = "absolute"; // #video-section을 상단 고정
+            }, 700);
         }
 
-        window.addEventListener('resize', () => {
-            const offset = currentSection * window.innerHeight;
-            sections.forEach((section) => {
-                section.style.transform = `translateY(-${offset}px)`;
-            });
+        // 맨 위로 스크롤하면 #video-section으로 복귀
+        document.addEventListener("scroll", () => {
+            if (window.scrollY === 0 && currentSection === 1) {
+                resetToFirstSection();
+            }
         });
+
+        function resetToFirstSection() {
+            currentSection = 0;
+            document.body.classList.remove("scroll-enabled");
+            document.body.classList.add("scroll-disabled");
+            videoSection.style.transform = `translateY(0)`; // #video-section 원래 위치로 복귀
+            videoSection.style.position = "fixed"; // 다시 화면에 고정
+        }
     </script>
 </body>
 

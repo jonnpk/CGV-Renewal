@@ -25,7 +25,7 @@ header{
     align-items: center;
     width: 100%;
     box-sizing: border-box;
-    z-index: 1;
+    z-index: 99;
 }
 
 .header-nav{
@@ -147,6 +147,20 @@ header{
     align-items: center;
     height: 100vh;
     overflow: hidden;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    z-index: 10;
+    transition: transform 0.7s linear;
+}
+
+#video-section.scroll-disabled {
+    overflow-y: hidden;
+}
+
+#video-section.scroll-enabled {
+    overflow-y: auto;
 }
 
 video{
@@ -163,18 +177,13 @@ video{
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative;
 }
 
 .interactive-text-area{
     position: relative;
     top: -5%;
     left: -1%;
-    border: 1px solid #222;
-}
-
-.interactive-text-area p{
-    font-size: 24px;
-    font-weight: bold;
 }
 
 .title-container{
