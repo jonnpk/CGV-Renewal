@@ -7,6 +7,7 @@
     <title>CGV</title>
     <link rel="stylesheet" href="./source/css/reset.css">
     <link rel="stylesheet" href="./source/css/style.css">
+    <link rel="stylesheet" href="./source/css/media.css">
 </head>
 
 <body>
@@ -102,12 +103,15 @@
 
 
     <section id="video-section">
-        <video src="source/fourdx_video.mp4" autoplay muted loop></video>
-        <div class="mouse-box">
-            <div class="mouse-body">
-                <div class="mouse-btn"></div>
+        <div class="video-section-web-view">
+            <video src="source/fourdx_video.mp4" autoplay muted loop></video>
+            <div class="mouse-box">
+                <div class="mouse-body">
+                    <div class="mouse-btn"></div>
+                </div>
             </div>
         </div>
+        <div class="video-section-mobile-view"></div>
     </section>
 
 
@@ -1046,11 +1050,12 @@
         // #intro-section을 관찰 대상으로 지정
         observer.observe(document.querySelector("#intro-section"));
 
-        
+
 
         // 풀페이지 스크롤
         let currentSection = 0;
         const videoSection = document.querySelector("#video-section");
+        const body = document.body;
         let isScrolling = false;
 
         // 스크롤 다운으로 #video-section을 넘길 때
@@ -1066,15 +1071,27 @@
         // #video-section에서 다음 섹션으로 이동
         function moveToNextSection() {
             isScrolling = true;
-            videoSection.style.transform = `translateY(-100vh)`; // 부드럽게 이동
+
+            // CSS 클래스를 추가하여 부드러운 전환
+            body.classList.add("scrolled");
+
 
             setTimeout(() => {
-                isScrolling = false;
+                // 첫 화면 고정 해제
+                videoSection.style.position = "absolute";
+                videoSection.style.top = "0"; // 상단에 고정
                 currentSection = 1; // 다음 섹션으로 넘어감
-                document.body.classList.remove("scroll-disabled"); // 일반 스크롤 활성화
-                document.body.classList.add("scroll-enabled");
-                videoSection.style.position = "absolute"; // #video-section을 상단 고정
-            }, 700);
+                document.body.classList.add("scroll-enabled"); // 이후 섹션에서 일반 스크롤 허용
+                isScrolling = false;
+            }, 700); // 700ms 후 스크롤 완료 예상
+
+            // setTimeout(() => {
+            //     isScrolling = false;
+            //     currentSection = 1; // 다음 섹션으로 넘어감
+            //     document.body.classList.remove("scroll-disabled"); // 일반 스크롤 활성화
+            //     document.body.classList.add("scroll-enabled");
+            //     videoSection.style.position = "absolute"; // #video-section을 상단 고정
+            // }, 700);
         }
 
         // 맨 위로 스크롤하면 #video-section으로 복귀
@@ -1087,9 +1104,13 @@
         function resetToFirstSection() {
             currentSection = 0;
             document.body.classList.remove("scroll-enabled");
-            document.body.classList.add("scroll-disabled");
-            videoSection.style.transform = `translateY(0)`; // #video-section 원래 위치로 복귀
+            body.classList.remove("scrolled");
+            // videoSection.style.transform = `translateY(0)`; // #video-section 원래 위치로 복귀
             videoSection.style.position = "fixed"; // 다시 화면에 고정
+            window.scrollTo({
+                top: 0, // 원래 위치로 복귀
+                behavior: "smooth"
+            });
         }
     </script>
 </body>
