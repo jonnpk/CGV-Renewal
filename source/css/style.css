@@ -153,6 +153,10 @@ header{
     transition: transform 0.7s linear;
 }
 
+.video-section-img-view{
+    display: none;
+}
+
 .scrolled #video-section{
     transform: translateY(-100%);
 }
