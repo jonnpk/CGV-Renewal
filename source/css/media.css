@@ -22,7 +22,8 @@
 
     .article-container{
         width: 100%;
-
+        padding: 0 32px;
+        box-sizing: border-box;
     }
 
     .header-nav{
@@ -42,6 +43,27 @@
     .ticket-btn{
         margin-left: auto;
         font-size: 18px;
+    }
+
+    .fourdx-content-box{
+        background-color: rgba(228, 35, 19, 0.5);
+        border-radius: 14px;
+        box-shadow: 1px 4px 10px rgba(0, 0, 0, 0.4);
+        transition: background-color 0.2s;
+    }
+
+    .fourdx-icon-list{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    
+    .fourdx-icon{
+        width: 64px;
+    }
+
+    .icon-circle{
+        width: 40px;
+        height: 40px;
     }
 
     .imax-info-wrap{
@@ -72,14 +94,30 @@
         font-size: 10px;
     }
 
-    .prestige-theater{
-        /* width: 100%; */
-        height: 297px;
-        border-radius: 28px;
-        display: flex;
-        align-items: center;
-        box-shadow: 1px 4px 10px rgba(0, 0, 0, 0.4);
-        overflow: hidden;
+    .footer-nav{
+        gap: 8px;
     }
+
+    .footer-nav a{
+        font-size: 12px;
+    }
+
+    .company-info-text{
+        font-size: 12px;
+        line-height: 20px;
+    }
+
+    select{
+        font-size: 12px;
+        padding: 4px 8px;
+        transition: 0.2s;
+    }
+
+    .go-btn{
+        font-size: 14px;
+        font-weight: 600;
+        padding: 6px;
+    }
+    
 
 }

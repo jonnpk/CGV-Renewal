@@ -278,6 +278,7 @@ video{
 }
 
 .section-container.customer{
+    max-width: 1200px;
     justify-content: center;
     align-items: center;
 }
@@ -370,7 +371,7 @@ video{
 }
 
 .fourdx-content-box{
-    width: 328px;
+    max-width: 328px;
     background-color: rgba(228, 35, 19, 0.5);
     border-radius: 14px;
     box-shadow: 1px 4px 10px rgba(0, 0, 0, 0.4);
@@ -385,9 +386,7 @@ video{
 
 .fourdx-icon-list{
     display: flex;
-    flex-wrap: wrap;
-    padding: 16px 24px;
-    row-gap: 16px;
+    padding: 16px 24px
 }
 
 .fourdx-icon{
@@ -397,7 +396,6 @@ video{
     align-items: center;
     gap: 8px;
 }
-
 
 .fourdx-icon p{
     font-size: 12px;
@@ -640,15 +638,20 @@ video{
 }
 
 .article-container{
-    width: 1200px;
+    max-width: 1200px;
     display: flex;
     flex-wrap: wrap;
-    gap: 32px;
+    column-gap: 2%;
+    row-gap: 32px;
+    padding: 0 32px;
+    box-sizing: border-box;
+
 }
 
 .prestige-theater{
-    width: 584px;
-    height: 378px;
+    flex: 1 1 48%;
+    max-width: 584px;
+    height: auto;
     border-radius: 28px;
     display: flex;
     align-items: center;
@@ -658,6 +661,7 @@ video{
 
 .prestige-theater img{
     transition: transform 0.5s;
+    width: 100%;
 }
 
 .prestige-theater img:hover{
@@ -693,7 +697,7 @@ video{
 
 .customer-info-area{
     display: flex;
-    gap: 222px;
+    gap: clamp(8px, 10vw, 222px);
     margin-bottom: 150px;
 }
 
