@@ -219,14 +219,22 @@ video{
     background-image: url(/source/background/title-prestige.jpg);
 }
 
+.title-container.prestige br{
+    display: none;
+}
+
 .title-area{
     text-align: center;
-    line-height: 30px;
+}
+
+.title-area h2{
+    padding: 16px;
 }
 
 .title-area p{
     font-size: 14px;
     color: white;
+    line-height: 20px;
 }
 
 .section-container-wrap{
@@ -373,7 +381,7 @@ video{
 .fourdx-content-box{
     max-width: 328px;
     background-color: rgba(228, 35, 19, 0.5);
-    border-radius: 14px;
+    border-radius: 18px;
     box-shadow: 1px 4px 10px rgba(0, 0, 0, 0.4);
     transition: background-color 0.2s;
 }

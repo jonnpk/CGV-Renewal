@@ -45,18 +45,6 @@
         font-size: 18px;
     }
 
-    .fourdx-content-box{
-        background-color: rgba(228, 35, 19, 0.5);
-        border-radius: 14px;
-        box-shadow: 1px 4px 10px rgba(0, 0, 0, 0.4);
-        transition: background-color 0.2s;
-    }
-
-    .fourdx-icon-list{
-        display: flex;
-        flex-wrap: wrap;
-    }
-    
     .fourdx-icon{
         width: 64px;
     }
@@ -118,6 +106,59 @@
         font-weight: 600;
         padding: 6px;
     }
-    
+}
 
+@media screen and (max-width: 878px) {
+    .title-container.prestige br{
+        display: block;
+    }
+
+    .fourdx-icon{
+        width: 60px;
+    }
+
+    .icon-circle{
+        width: 36px;
+        height: 36px;
+    }
+
+    .icon-circle.wind img{
+        width: 21px;
+        height: 15px;
+    }
+    
+    .icon-circle.bubbles img{
+        width: 23px;
+        height: 23px;
+    }
+    
+    .icon-circle.lightning img{
+        width: 29px;
+        height: 24px;
+    }
+    
+    .icon-circle.fog img{
+        width: 22px;
+        height: 22px;
+    }
+    
+    .icon-circle.vibration img{
+        width: 21px;
+        height: 16px;
+    }
+    
+    .icon-circle.scents img{
+        width: 22px;
+        height: 22px;
+    }
+    
+    .icon-circle.water img{
+        width: 21px;
+        height: 24px;
+    }
+    
+    .icon-circle.motion img{
+        width: 24px;
+        height: 15px;
+    }
 }
