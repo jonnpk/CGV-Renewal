@@ -39,6 +39,11 @@ header{
     height: 60px;
 }
 
+.hamburger{
+    display: none;
+    align-self: center;
+}
+
 .header-menu{
     display: flex;
     gap: 40px;
@@ -178,7 +183,7 @@ video{
     background-image: url(/source/background/intro.jpg);
     height: 100vh;
     background-size: cover;
-    background-position: 50% 50%;
+    background-position: 48% 50%;
     background-repeat: no-repeat;
     display: flex;
     justify-content: center;
@@ -188,7 +193,7 @@ video{
 
 .interactive-text-area{
     position: relative;
-    top: -5%;
+    top: -6%;
     left: -1%;
 }
 
@@ -205,12 +210,6 @@ video{
     margin-top: 150px;
 }
 
-.title-container h2{
-    font-size: 24px;
-    font-weight: 600;
-    color: white;
-}
-
 .title-container.tech{
     background-image: url(/source/background/title-tech.jpg);
 }
@@ -219,7 +218,15 @@ video{
     background-image: url(/source/background/title-prestige.jpg);
 }
 
-.title-container.prestige br{
+.title-container.tech br{
+    display: none;
+}
+
+.web-br{
+    display: none;
+}
+
+.mobile-br{
     display: none;
 }
 
@@ -228,6 +235,9 @@ video{
 }
 
 .title-area h2{
+    font-size: 24px;
+    font-weight: 600;
+    color: white;
     padding: 16px;
 }
 
@@ -296,7 +306,7 @@ video{
     flex-direction: column;
     gap: 32px;
     margin-top: 108px;
-    margin-left: 150px;
+    margin-left: clamp(8px, 10vw, 150px);
 }
 
 .theater-box.prestige{
@@ -328,7 +338,7 @@ video{
 }
 
 .learn-more-btn{
-    display: inline-block;
+    display: block;
     align-self: flex-start;
     text-decoration: none;
     color: white;
@@ -353,9 +363,8 @@ video{
     align-items: center;
     align-self: flex-end;
     margin-bottom: 57px;
-    margin-right: 150px;
+    margin-right: clamp(8px, 10vw, 150px);
     gap: 16px;
-
 }
 
 .article-box{
@@ -378,12 +387,17 @@ video{
     line-height: 18px;
 }
 
+.imax-br{
+    display: none;
+}
+
 .fourdx-content-box{
     max-width: 328px;
     background-color: rgba(228, 35, 19, 0.5);
     border-radius: 18px;
     box-shadow: 1px 4px 10px rgba(0, 0, 0, 0.4);
     transition: background-color 0.2s;
+    padding: 16px 24px
 }
 
 .fourdx-content-box:hover{
@@ -394,7 +408,7 @@ video{
 
 .fourdx-icon-list{
     display: flex;
-    padding: 16px 24px
+    padding: 8px 0px;
 }
 
 .fourdx-icon{
@@ -501,7 +515,6 @@ video{
 
 .imax-logo{
     width: 88px;
-    height: 25px;
 }
 
 .imax-content-box{
@@ -577,7 +590,6 @@ video{
 
 .starium-logo{
     width: 115px;
-    height: 25px;
 }
 
 .starium-content-box{
@@ -653,7 +665,6 @@ video{
     row-gap: 32px;
     padding: 0 32px;
     box-sizing: border-box;
-
 }
 
 .prestige-theater{
@@ -679,22 +690,18 @@ video{
 
 .chef-logo{
     width: 220px;
-    height: 30px;
 }
 
 .livingroom-logo{
     width: 253px;
-    height: 27px;
 }
 
 .suite-logo{
     width: 184px;
-    height: 32px;
 }
 
 .foret-logo{
     width: 226px;
-    height: 34px;
 }
 
 #customer-section{
@@ -810,14 +817,17 @@ footer{
     flex-direction: column;
     align-items: center;
     padding: 0;
-    margin-top: 62px;
+    margin-top: 56px;
     margin-bottom: 56px;
     gap: 28px;
 }
 
 .footer-nav{
     display: flex;
+    justify-content: center;
     gap: 16px;
+    margin-left: 16px;
+    margin-right: 16px;
 }
 
 .footer-nav a{
@@ -846,6 +856,11 @@ footer{
     color: white;
     font-size: 14px;
     line-height: 24px;
+    margin-left: 16px;
+}
+
+.company-info-text br{
+    display: none;
 }
 
 .footer-emport{
@@ -854,6 +869,7 @@ footer{
 
 .company-link{
     align-self: flex-end;
+    margin-right: 16px;
 }
 
 .go-btn{
