@@ -180,7 +180,7 @@ video{
 }
 
 #intro-section{
-    background-image: url(../background/intro.jpg);
+    background-image: url(/source/image/background/intro.jpg);
     height: 100vh;
     background-size: cover;
     background-position: 48% 50%;
@@ -211,11 +211,11 @@ video{
 }
 
 .title-container.tech{
-    background-image: url(../background/title-tech.jpg);
+    background-image: url(/source/image/background/title-tech.jpg);
 }
 
 .title-container.prestige{
-    background-image: url(../background/title-prestige.jpg);
+    background-image: url(/source/image/background/title-prestige.jpg);
 }
 
 .title-container.tech br{
@@ -257,16 +257,16 @@ video{
 }
 
 .section-container-wrap.ultra-4dx{
-    background-image: url(../background/ultra-4dx.jpg);
+    background-image: url(/source/image/background/ultra-4dx.jpg);
     
 }
 
 .section-container-wrap.imax{
-    background-image: url(../background/imax.jpg);
+    background-image: url(/source/image/background/imax.jpg);
 }
 
 .section-container-wrap.starium{
-    background-image: url(../background/starium.jpg);
+    background-image: url(/source/image/background/starium.jpg);
 }
 
 .section-container{
@@ -550,15 +550,15 @@ video{
 }
 
 .imax-icon.camera{
-    background-image: url(../icon/imax-icon_camera.svg);
+    background-image: url(/source/image/icon/imax-icon_camera.svg);
 }
 
 .imax-icon.screen{
-    background-image: url(../icon/imax-icon_screen.svg);
+    background-image: url(/source/image/icon/imax-icon_screen.svg);
 }
 
 .imax-icon.sound{
-    background-image: url(../icon/imax-icon_sound.svg);
+    background-image: url(/source/image/icon/imax-icon_sound.svg);
 }
 
 .imax-info-title{
@@ -624,15 +624,15 @@ video{
 }
 
 .starium-icon.super-giant{
-    background-image: url(../icon/starium-icon_screen.svg);
+    background-image: url(/source/image/icon/starium-icon_screen.svg);
 }
 
 .starium-icon.four-k{
-    background-image: url(../icon/starium-icon_resol.svg);
+    background-image: url(/source/image/icon/starium-icon_resol.svg);
 }
 
 .starium-icon.most-dynamic{
-    background-image: url(../icon/starium-icon_sound.svg);
+    background-image: url(/source/image/icon/starium-icon_sound.svg);
 }
 
 .starium-info-text-box{

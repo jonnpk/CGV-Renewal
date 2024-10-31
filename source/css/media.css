@@ -5,7 +5,7 @@
 
     .video-section-img-view {
         display: block;
-        background-image: url(../background/video.jpg);
+        background-image: url(/source/image/background/video.jpg);
         background-size: cover;
         background-position: center;
         width: 100vw;
@@ -334,7 +334,11 @@
         padding: 8px;
     }
 
-    body {
+    /* body {
         overflow: auto;
     }
+
+    .wrap {
+        transform: translateY(0);
+    } */
 }
