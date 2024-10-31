@@ -333,4 +333,8 @@
     .title-area h2{
         padding: 8px;
     }
+
+    body {
+        overflow: auto;
+    }
 }
