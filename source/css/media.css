@@ -5,7 +5,7 @@
 
     .video-section-img-view {
         display: block;
-        background-image: url(/source/background/video.jpg);
+        background-image: url(../background/video.jpg);
         background-size: cover;
         background-position: center;
         width: 100vw;
