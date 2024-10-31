@@ -49,6 +49,11 @@
         font-weight: 600;
         padding: 6px;
     }
+
+    .section-container.customer {
+        padding: 0 16px;
+        box-sizing: border-box;
+    }
 }
 
 @media screen and (max-width: 878px) {
