@@ -145,6 +145,11 @@ header{
     }
 }
 
+.touch-gesture{
+    display: none;
+}
+
+
 #video-section{
     display: flex;
     justify-self: center;

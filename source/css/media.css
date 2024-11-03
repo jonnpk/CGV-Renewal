@@ -57,6 +57,19 @@
 }
 
 @media screen and (max-width: 878px) {
+    body {
+        overflow: auto;
+    }
+
+    .wrap {
+        transform: translateY(0);
+    }
+
+    #video-section {
+        overflow: auto;
+        position: relative;
+    }
+    
     .web-br {
         display: block;
     }
@@ -71,6 +84,15 @@
     
     .mouse-box{
         display: none;
+    }
+
+    .touch-gesture{
+        display: block;
+        width: 32px;
+        position: absolute;
+        bottom: 60px;
+        left: 49%;
+        animation: mm 1.5s infinite;
     }
 }
 

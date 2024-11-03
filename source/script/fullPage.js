@@ -1,11 +1,7 @@
 // 풀페이지 스크롤
 const intro = document.querySelector('.intro'); // 영상 들어있는 부분
 const wrap = document.querySelector('.wrap'); // 그 외 밑에 들어갈 모든 부분
-
-// if (window.innerWidth < 385) {
-    // scrollStart(false);
-    // isIntro = false
-// }
+const videoSection = document.querySelector('#video-section');
 
 let isIntro = true;
 // 현재 인트로 화면이 활성화 되어있는지 여부를 나타냄
@@ -19,6 +15,9 @@ checkScroll()
 // 함수를 호출하여 초기 스크롤 위치를 확인
 // 현재 스크롤의 위치라 0이 아니라면 인트로 화면을 건너뛰고 새로고침한 구간을 유지함
 
+window.addEventListener('load', checkWidth);
+window.addEventListener('resize', checkWidth);
+
 function checkScroll() {
     if (window.scrollY !== 0) {
         // 브라우저를 새로고침 했을 때 스크롤의 Y값이 0이 아니라면
@@ -26,13 +25,24 @@ function checkScroll() {
         // scrollStart 함수를 호출하고
         isIntro = false;
         // isIntro에 false값을 대입해 인트로 화면을 비활성화함
+    } 
+}
+
+function checkWidth(){
+    if(window.innerWidth <= 878) {
+        isIntro = false;
+        moving = false;
+        intro.style.transform = `translateY(0)`;
+        wrap.style.transform = `translateY(0)`;
+        intro.style.transition = 'none';
+        wrap.style.transition = 'none';
     }
 }
 
 function scrollStart(transition = true) {
     // transition이라는 매개변수에 기본값 true를 지정해준다.
     // 함수가 호출될 때 transition 값이 주어지지 않으면 자동으로 함수를 생성할 때 대입한 true로 설정된다. 
-    if (!moving) {
+    if (!moving && isIntro && window.innerWidth >= 878) {
         // moving 변수가 false일때 내부 코드를 실행한다
         // moving이 false라는 것은 화면 전환이 현재 진행 중이지 않다는 뜻
         moving = true;
@@ -72,10 +82,10 @@ function scrollStart(transition = true) {
 
 function returnIntro() {
     // 본 화면을 숨기고 인트로 화면으로 돌아가는 역할을 하는 함수
-    if (!moving) {
+    if (!moving && !isIntro && window.innerWidth > 878) {
         // moving 변수가 false일때 내부 코드를 실행한다
         moving = true;
-        // 무빙에 false를 대입하여 전환 중 상태로 표시한다.
+        // 무빙에 true를 대입하여 전환 중 상태로 표시한다.
         setTimeout(() => {
             moving = false
         }, 1000);
@@ -106,7 +116,7 @@ window.addEventListener('mousewheel', (e) => {
         console.log('아래로는 내렸다')
     }
 
-    if (window.scrollY === 0 && !isIntro && e.deltaY < 0) {
+    if (window.scrollY === 0 && !isIntro && e.deltaY < 0 && window.innerWidth > 878) {
         // 현재 스크롤의 위치가 0일때 즉 페이지 맨 위에 있을때만 실행됨
         // isIntro가 false인경우 즉 wrap이 보여지고 있을 경우
         // 사용자가 스크롤을 위로 올리고 있을 때
