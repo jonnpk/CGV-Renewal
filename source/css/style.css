@@ -36,7 +36,14 @@ header{
 .cgv-logo,
 .cgv-logo > svg {
     width: 136px;
-    height: 60px;
+}
+
+svg:hover .cgv-1 {
+    fill: #ffffff;
+}
+
+svg:hover .cgv-2 {
+    fill: #ffffff;
 }
 
 .hamburger{
