@@ -11,7 +11,7 @@
      index = 0;  // 인덱스를 0으로 초기화
      isAdding = true;  // 글자를 추가하는 상태로 초기화
      textToBeTypedIndex = 0;  // 첫 번째 문구부터 시작
-     typeText.innerText = ""; // 텍스트를 비워서 애니메이션 처음부터 시작
+     typeText.innerText = " "; // 텍스트를 비워서 애니메이션 처음부터 시작
      isPlaying = false; // 애니메이션 상태를 종료 상태로 설정
      clearTimeout(timeoutId); // 애니메이션 중단
  }
